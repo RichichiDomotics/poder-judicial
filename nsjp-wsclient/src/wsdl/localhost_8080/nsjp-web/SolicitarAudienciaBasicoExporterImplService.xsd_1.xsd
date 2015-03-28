@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.1-hudson-28-. --><xs:schema xmlns:tns="http://ws.service.nsjp.segob.gob.mx/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.service.nsjp.segob.gob.mx/">
+
+<xs:element name="NSJPNegocioException" type="tns:NSJPNegocioException" />
+
+<xs:element name="registrarSolicitudAudienciaBasico" type="tns:registrarSolicitudAudienciaBasico" />
+
+<xs:element name="registrarSolicitudAudienciaBasicoResponse" type="tns:registrarSolicitudAudienciaBasicoResponse" />
+
+<xs:complexType name="registrarSolicitudAudienciaBasico">
+<xs:sequence>
+<xs:element name="arg0" type="tns:solicitudAudienciaBasicoWSDTO" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="solicitudAudienciaBasicoWSDTO">
+<xs:complexContent>
+<xs:extension base="tns:genericWSDTO">
+<xs:sequence>
+<xs:element name="areaSolicitanteId" type="xs:long" minOccurs="0" />
+<xs:element name="audiencia" type="tns:audienciaWSDTO" minOccurs="0" />
+<xs:element name="fechaLimite" type="xs:dateTime" minOccurs="0" />
+<xs:element name="nombreSolicitante" type="xs:string" minOccurs="0" />
+<xs:element name="numeroCasoAsociado" type="xs:string" minOccurs="0" />
+<xs:element name="solicitanteExternoId" type="xs:long" minOccurs="0" />
+<xs:element name="solicitudId" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="genericWSDTO">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="audienciaWSDTO">
+<xs:sequence>
+<xs:element name="audienciaId" type="xs:long" minOccurs="0" />
+<xs:element name="domicilioSala" type="xs:string" minOccurs="0" />
+<xs:element name="duracionEstimada" type="xs:int" minOccurs="0" />
+<xs:element name="estatusAudienciaId" type="xs:long" minOccurs="0" />
+<xs:element name="fechaAsignacionSala" type="xs:dateTime" minOccurs="0" />
+<xs:element name="fechaHoraAudiencia" type="xs:dateTime" minOccurs="0" />
+<xs:element name="motivo" type="xs:string" minOccurs="0" />
+<xs:element name="nombreSala" type="xs:string" minOccurs="0" />
+<xs:element name="salaTemporal" type="xs:boolean" />
+<xs:element name="tipoAudienciaId" type="xs:long" minOccurs="0" />
+<xs:element name="ubicacionSala" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrarSolicitudAudienciaBasicoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NSJPNegocioException">
+<xs:sequence>
+<xs:element name="codigo" type="tns:codigoError" minOccurs="0" />
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="codigoError">
+<xs:restriction base="xs:string">
+<xs:enumeration value="FORMATO" />
+<xs:enumeration value="PARAMETROS_INSUFICIENTES" />
+<xs:enumeration value="EJCUCION_OPERACION_ESTADO_INCORRECTO" />
+<xs:enumeration value="RANGO_FECHAS_CRUZADAS" />
+<xs:enumeration value="ERROR_COMUNICACION" />
+<xs:enumeration value="ERROR_TRANSORMACION_FECHAS" />
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
