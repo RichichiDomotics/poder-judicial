@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="nsjp-comun" />
+        <module name="nsjp-delegate" />
+        <module name="nsjp-dto" />
+        <module name="nsjp-modelo" />
+        <module name="nsjp-persistencia" />
+        <module name="nsjp-servicios-api" />
+        <module name="nsjp-servicios-impl" />
+        <module name="nsjp-web" />
+        <module name="nsjp-ws" />
+        <module name="nsjp-wsclient" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nsjp" target="1.6" />
+      <module name="nsjp-comun" target="1.6" />
+      <module name="nsjp-delegate" target="1.6" />
+      <module name="nsjp-dto" target="1.6" />
+      <module name="nsjp-modelo" target="1.6" />
+      <module name="nsjp-persistencia" target="1.6" />
+      <module name="nsjp-servicios-api" target="1.6" />
+      <module name="nsjp-servicios-impl" target="1.6" />
+      <module name="nsjp-web" target="1.6" />
+      <module name="nsjp-ws" target="1.6" />
+      <module name="nsjp-wsclient" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
+

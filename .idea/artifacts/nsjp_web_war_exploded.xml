@@ -1,0 +1,121 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="nsjp-web:war exploded">
+    <output-path>$PROJECT_DIR$/nsjp-web/target/nsjp-web</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="nsjp-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="nsjp-comun-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-comun" />
+          </element>
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.7.0" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.6" />
+          <element id="archive" name="nsjp-dto-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-dto" />
+          </element>
+          <element id="archive" name="nsjp-delegate-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-delegate" />
+          </element>
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="archive" name="nsjp-persistencia-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-persistencia" />
+          </element>
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:3.6.0.Final" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.6" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: javax.transaction:jta:1.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: javassist:javassist:3.12.0.GA" />
+          <element id="archive" name="nsjp-servicios-impl-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-servicios-impl" />
+          </element>
+          <element id="archive" name="nsjp-servicios-api-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-servicios-api" />
+          </element>
+          <element id="archive" name="nsjp-wsclient-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-wsclient" />
+          </element>
+          <element id="library" level="project" name="Maven: joda-time:joda-time:1.6.2" />
+          <element id="library" level="project" name="Maven: commons-collections:commons-collections:3.1" />
+          <element id="archive" name="nsjp-modelo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-modelo" />
+          </element>
+          <element id="archive" name="nsjp-ws-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="nsjp-ws" />
+          </element>
+          <element id="library" level="project" name="Maven: com.thoughtworks.xstream:xstream:1.3.1" />
+          <element id="library" level="project" name="Maven: xpp3:xpp3_min:1.1.4c" />
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-struts:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: struts:struts:1.2.9" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.0" />
+          <element id="library" level="project" name="Maven: commons-validator:commons-validator:1.1.4" />
+          <element id="library" level="project" name="Maven: oro:oro:2.0.7" />
+          <element id="library" level="project" name="Maven: xalan:xalan:2.5.1" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.struts:struts-extras:1.3.10" />
+          <element id="library" level="project" name="Maven: org.apache.struts:struts-core:1.3.8" />
+          <element id="library" level="project" name="Maven: commons-chain:commons-chain:1.1" />
+          <element id="library" level="project" name="Maven: struts:struts-el:1.2.9" />
+          <element id="library" level="project" name="Maven: taglibs:standard:1.0.6" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.0.6" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.0.4" />
+          <element id="library" level="project" name="Maven: org.apache.struts:struts-tiles:1.3.10" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.11" />
+          <element id="library" level="project" name="Maven: jasperreports:jasperreports:1.1.1" />
+          <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.1" />
+          <element id="library" level="project" name="Maven: jfree:jcommon:1.0.16" />
+          <element id="library" level="project" name="Maven: jfree:jfreechart:1.0.9-brew" />
+          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.3.02" />
+          <element id="library" level="project" name="Maven: eclipse:jdtcore:3.2.0.v_658" />
+          <element id="library" level="project" name="Maven: com.lowagie:itext:2.0.8" />
+          <element id="library" level="project" name="Maven: bouncycastle:bcmail-jdk14:138" />
+          <element id="library" level="project" name="Maven: bouncycastle:bcprov-jdk14:138" />
+          <element id="library" level="project" name="Maven: de.huxhorn.lilith:de.huxhorn.lilith.3rdparty.flyingsaucer.core-renderer:8Pre2" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-frontend-jaxws:2.4.1" />
+          <element id="library" level="project" name="Maven: xml-resolver:xml-resolver:1.2" />
+          <element id="library" level="project" name="Maven: asm:asm:3.3" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-api:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-common-utilities:2.4.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.1.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:3.1.1" />
+          <element id="library" level="project" name="Maven: org.apache.ws.xmlschema:xmlschema-core:2.0" />
+          <element id="library" level="project" name="Maven: org.apache.neethi:neethi:3.0.0" />
+          <element id="library" level="project" name="Maven: wsdl4j:wsdl4j:1.6.2" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-core:2.4.1" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.1.13" />
+          <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-javamail_1.4_spec:1.7.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-bindings-soap:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-tools-common:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-databinding-jaxb:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-bindings-xml:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-frontend-simple:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-ws-addr:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-http:2.4.1" />
+          <element id="library" level="project" name="Maven: org.apache.cxf:cxf-rt-transports-common:2.4.1" />
+          <element id="library" level="project" name="Maven: com.google.code:kaptcha:2.3" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="C:\Users\Alex\Documents\nsjp\nsjp-web\target/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="nsjp-web/web/Web" />
+    </root>
+  </artifact>
+</component>

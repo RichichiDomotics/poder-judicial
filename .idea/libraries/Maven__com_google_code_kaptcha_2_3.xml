@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.code:kaptcha:2.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Documents/kaptcha-2.3.2" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Documents/kaptcha-2.3.2/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Documents/kaptcha-2.3.2/src/java" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Documents/kaptcha-2.3.2" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-comun" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-delegate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-dto" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-modelo" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/nsjp-persistencia" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/nsjp-servicios-api" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/nsjp-servicios-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-ws" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nsjp-wsclient" charset="UTF-8" />
+  </component>
+</project>
+

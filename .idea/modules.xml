@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/nsjp.iml" filepath="$PROJECT_DIR$/nsjp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-comun/nsjp-comun.iml" filepath="$PROJECT_DIR$/nsjp-comun/nsjp-comun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-delegate/nsjp-delegate.iml" filepath="$PROJECT_DIR$/nsjp-delegate/nsjp-delegate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-dto/nsjp-dto.iml" filepath="$PROJECT_DIR$/nsjp-dto/nsjp-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-modelo/nsjp-modelo.iml" filepath="$PROJECT_DIR$/nsjp-modelo/nsjp-modelo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-persistencia/nsjp-persistencia.iml" filepath="$PROJECT_DIR$/nsjp-persistencia/nsjp-persistencia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-servicios-api/nsjp-servicios-api.iml" filepath="$PROJECT_DIR$/nsjp-servicios-api/nsjp-servicios-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-servicios-impl/nsjp-servicios-impl.iml" filepath="$PROJECT_DIR$/nsjp-servicios-impl/nsjp-servicios-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-web/nsjp-web.iml" filepath="$PROJECT_DIR$/nsjp-web/nsjp-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-ws/nsjp-ws.iml" filepath="$PROJECT_DIR$/nsjp-ws/nsjp-ws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nsjp-wsclient/nsjp-wsclient.iml" filepath="$PROJECT_DIR$/nsjp-wsclient/nsjp-wsclient.iml" />
+    </modules>
+  </component>
+</project>
+
