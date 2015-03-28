@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- CONEXION A PROCURADURIA INCIDENCIAS -->
+	
+	
+	<!--  RS  -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="jdbc:sqlserver://132.147.161.128:1433;databaseName=desarrollo-rs" />
+		<property name="username" value="desa-rs" />
+		<property name="password" value="des@123r" />
+		<property name="maxActive" value="20" />
+		<property name="maxOpenPreparedStatements" value="20" />
+		<property name="maxIdle" value="20" />
+		<property name="initialSize" value="20" />
+	</bean>
+	<!-- DEFENSORIA --> 
+	<!-- bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="jdbc:sqlserver://132.147.161.128:1433;databaseName=incidencia-def" />
+		<property name="username" value="incidencia-def" />
+		<property name="password" value="incidenci@123f" />
+		<property name="maxActive" value="20" />
+		<property name="maxOpenPreparedStatements" value="20" />
+		<property name="maxIdle" value="20" />
+		<property name="initialSize" value="20" />
+	</bean-->
+	<!-- PODER JUDICIAL>   
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="jdbc:sqlserver://132.147.161.128:1433;databaseName=incidencia-pj" />
+		<property name="username" value="incidencia-pj" />
+		<property name="password" value="incidenci@123j" />
+		<property name="maxActive" value="20" />
+		<property name="maxOpenPreparedStatements" value="20" />
+		<property name="maxIdle" value="20" />
+		<property name="initialSize" value="20" />
+	</bean -->
+	<!-- SSP   
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="url" value="jdbc:sqlserver://132.147.161.128:1433;databaseName=incidencia-ssp" />
+		<property name="username" value="incidencia-ssp" />
+		<property name="password" value="incidenci@123s" />
+		<property name="maxActive" value="20" />
+		<property name="maxOpenPreparedStatements" value="20" />
+		<property name="maxIdle" value="20" />
+		<property name="initialSize" value="20" />
+	</bean -->
+<!-- WIN-89AM6L2EKC1  -->
+</beans>

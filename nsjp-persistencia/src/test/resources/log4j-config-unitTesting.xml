@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!--APPENDERS -->
+	<appender name="consola" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[%d{dd-MM-yy HH:mm:ss,SSS}] %5p (%45C{4}-%30M:%4L) -> %m%n" />
+		</layout>
+	</appender>
+	<appender name="desa" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="C:/logs/nsjp-unitTesting.log" />
+		<param name="MaxFileSize" value="5000KB" />
+		<param name="MaxBackupIndex" value="9" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[%d{dd-MM-yy HH:mm:ss,SSS}] %5p (%45C{4}-%30M:%4L) -> %m%n" />
+		</layout>
+	</appender>
+	<!--APPENDERS -->
+	<!--LOGGERS -->
+	<logger name="mx.gob.segob.nsjp" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="desa" />
+		<appender-ref ref="consola" />
+	</logger>
+	<logger name="org.springframework" additivity="false">
+		<level value="info" />
+		<appender-ref ref="desa" />
+	</logger>
+	<logger name="org.springframework.orm" additivity="false">
+		<level value="info" />
+		<appender-ref ref="desa" />
+	</logger>
+	<logger name="org.springframework.transaction" additivity="false">
+		<level value="info" />
+		<appender-ref ref="desa" />
+	</logger>
+	<logger name="org.hibernate" additivity="false">
+		<level value="info" />
+		<appender-ref ref="desa" />
+	</logger>
+	<!--ROOT -->
+	<root>
+		<level value="error" />
+		<appender-ref ref="consola" />
+	</root>
+	<!--ROOT -->
+	<!--LOGGERS -->
+</log4j:configuration>
