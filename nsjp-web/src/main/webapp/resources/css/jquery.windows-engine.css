@@ -1,0 +1,39 @@
+.modal-background {
+	POSITION: fixed; FILTER: alpha(opacity=50); BACKGROUND-COLOR: #777; WIDTH: 100%; HEIGHT: 100%; TOP: 0px; LEFT: 0px; -moz-opacity: .50; opacity: .50
+}
+.window-container {
+	POSITION: absolute; WIDTH: 350px; FONT-FAMILY: verdana; FONT-SIZE: 13px
+}
+.window-titleBar {
+	TEXT-ALIGN: center; MARGIN: 0px 9px; HEIGHT: 23px
+}
+.window-titleBar-content {
+	TEXT-ALIGN: center; BACKGROUND: url(default/top_mid.gif) repeat-x; HEIGHT: 23px; CURSOR: move; PADDING-TOP: 5px
+}
+.window-titleBar-leftCorner {
+	POSITION: absolute; WIDTH: 9px; BACKGROUND: url(default/top_left.gif) no-repeat; HEIGHT: 23px; TOP: 0px; LEFT: 0px
+}
+.window-titleBar-rightCorner {
+	POSITION: absolute; WIDTH: 9px; BACKGROUND: url(default/top_right.gif) no-repeat; HEIGHT: 23px; TOP: 0px; RIGHT: 0px
+}
+.window-minimizeButton {
+	POSITION: absolute; WIDTH: 20px; BACKGROUND: url(default/minimize_1.png) no-repeat 0px 0px; HEIGHT: 20px; TOP: 2px; CURSOR: pointer; RIGHT: 46px
+}
+.window-maximizeButton {
+	POSITION: absolute; WIDTH: 20px; BACKGROUND: url(default/maximize_1.png) no-repeat 0px 0px; HEIGHT: 20px; TOP: 2px; CURSOR: pointer; RIGHT: 28px
+}
+.window-closeButton {
+	POSITION: absolute; WIDTH: 20px; BACKGROUND: url(default/close_1.png) no-repeat 0px 0px; HEIGHT: 20px; TOP: 2px; CURSOR: pointer; RIGHT: 10px
+}
+.window-content {
+	BORDER-LEFT: #aaa 1px solid; BACKGROUND-COLOR: #ffffff; FONT-FAMILY: verdana; HEIGHT: 100%; COLOR: #000000; FONT-SIZE: 13px; OVERFLOW: auto; BORDER-RIGHT: #aaa 1px solid
+}
+.window-content iframe{
+	overflow-x: hidden;
+}
+.window-statusBar {
+	POSITION: relative; BORDER-LEFT: #aaa 1px solid; BACKGROUND: url(default/bottom_mid.gif) repeat-x; HEIGHT: 19px; OVERFLOW: hidden
+}
+.window-resizeIcon {
+	POSITION: absolute; WIDTH: 9px; BOTTOM: 0px; BACKGROUND: url(default/sizer.gif) no-repeat; HEIGHT: 19px; CURSOR: se-resize; RIGHT: 0px
+}

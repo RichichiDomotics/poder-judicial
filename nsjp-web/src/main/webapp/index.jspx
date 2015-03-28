@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:fiji="http://exadel.com/fiji">
+	<body>
+
+		<ui:composition template="/pages/templateInterna.jspx">
+
+
+			<ui:define name="contenido">
+				<table cellpadding="1" cellspacing="1">
+					<tr>
+						<td valign="top">
+							<table cellpadding="2" cellspacing="2">
+								<tr>
+									<td colspan="2">
+										<rich:simpleTogglePanel switchType="client" width="660px"
+											label="Actividad por Realizar">
+											<h:form>
+												<h:panelGroup id="panelPaginador">
+													<rich:dataTable
+														value="#{registrarPolizaBean.listaPolizaPorAutorizar}"
+														columns="10" var="poliza" id="table" rows="10">
+														<f:facet name="header">
+															<rich:columnGroup>
+																<rich:column breakBefore="true">
+																	<h:outputText value="No. de Póliza" />
+																</rich:column>
+																<rich:column>
+																	<h:outputText value="Descripción" />
+																</rich:column>
+																<rich:column>
+																	<h:outputText value="Tipo de Póliza" />
+																</rich:column>
+																<rich:column>
+																	<h:outputText value="Fecha de Alta" />
+																</rich:column>
+															</rich:columnGroup>
+														</f:facet>
+														<rich:column>
+															<h:commandLink value="#{poliza.idPoliza}"
+																action="#{registrarPolizaBean.muestraPoliza}">
+																<a4j:actionparam name="idPoliza"
+																	value="#{poliza.idPoliza}"
+																	assignTo="#{registrarPolizaBean.polizaid.clavePoliza}" />
+																<a4j:actionparam name="idMes" value="#{poliza.idMes}"
+																	assignTo="#{registrarPolizaBean.polizaid.mes}" />
+																<a4j:actionparam name="idAnio" value="#{poliza.idAnio}"
+																	assignTo="#{registrarPolizaBean.polizaid.anio}" />
+															</h:commandLink>
+														</rich:column>
+														<rich:column>
+															<h:outputText value="#{poliza.descripcion}"></h:outputText>
+														</rich:column>
+														<rich:column>
+															<h:outputText
+																value="#{poliza.tipoPoliza.descripcionPoliza}"></h:outputText>
+														</rich:column>
+														<rich:column>
+															<h:outputText value="#{poliza.fechaAlta}">
+																<f:convertDateTime pattern="dd/MM/yyyy" />
+															</h:outputText>
+														</rich:column>
+														<f:facet name="footer">
+															<rich:datascroller id="dts"
+																page="#{registrarPolizaBean.scrollerPage}" for="table"
+																maxPages="10" reRender="panelPaginador"
+																renderIfSinglePage="false" />
+														</f:facet>
+													</rich:dataTable>
+												</h:panelGroup>
+											</h:form>
+										</rich:simpleTogglePanel>
+									</td>
+
+								</tr>
+								<tr>
+									<td colspan="2">
+										<rich:simpleTogglePanel switchType="client" width="660px"
+											label="Lista de Actividad">
+
+										</rich:simpleTogglePanel>
+									</td>
+								</tr>
+								<tr>
+									<td valign="top">
+										<rich:simpleTogglePanel switchType="client" width="325px"
+											label="Calendario de Metas">
+										Calendario
+										</rich:simpleTogglePanel>
+									</td>
+									<td valign="top">
+										<rich:simpleTogglePanel switchType="client" width="325px"
+											label="Usuarios Conectados">
+										Usuarios Conectados
+										</rich:simpleTogglePanel>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td valign="top">
+							<table cellpadding="2" cellspacing="2">
+								<tr>
+									<td>
+										<rich:simpleTogglePanel switchType="client" width="390px"
+											label="Avance del Presupuesto">
+											<fiji:lineChart id="lineChartMulti" lineWidth="1"
+												captionY="Miles de pesos" value="#{gadgetMB.apData}"
+												markerCaption="none" barColors="#{gadgetMB.apColors}"
+												legendPosition="top" captionX="Objetos del Gasto"
+												legendCaption="Indexes"
+												subtitle="Estado Actual del Presupuesto" width="380"
+												height="350">
+												<fiji:chartData type="name" value="#{gadgetMB.apNames}" />
+											</fiji:lineChart>
+										</rich:simpleTogglePanel>
+									</td>
+
+								</tr>
+								<tr>
+									<td>
+										<rich:simpleTogglePanel switchType="client" width="390px"
+											label="Estado Financiero">
+											<fiji:columnChart id="barChartMulti"
+												value="#{gadgetMB.efData}"
+												subtitle="Comparación del Estado Financiero con el Periodo Anterior"
+												legendCaption="Periodos" legendPosition="top"
+												captionX="Conceptos" captionY="Miles de pesos"
+												barColors="#{gadgetMB.efColors}"
+												toolTipValue="{x} proyecta {y} miles de pesos" width="380"
+												height="350" barCaption="none">
+												<fiji:chartData type="name" value="#{gadgetMB.efNames}" />
+											</fiji:columnChart>
+										</rich:simpleTogglePanel>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<rich:simpleTogglePanel switchType="client" width="390px"
+											label="Recursos de Ayuda">
+										Manuales
+										</rich:simpleTogglePanel>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+			</ui:define>
+
+		</ui:composition>
+
+	</body>
+</html>

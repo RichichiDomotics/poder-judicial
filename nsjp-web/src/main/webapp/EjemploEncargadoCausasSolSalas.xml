@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>7</records>
+	<row id='1'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Sala 1</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Audiencia</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">23/06/2011  09:45 A.M.</div]]></cell>
+	</row>
+	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Sala 2</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Protegido</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">23/06/2011  09:45 A.M.</div>]]></cell>
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Sala 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">23/06/2011  09:45 A.M.</div>]]></cell>
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Sala 4</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Protegido</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">23/06/2011  09:45 A.M.</div>]]></cell>
+	</row>
+	<row id='5'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Sala 5</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">23/06/2011  09:45 A.M.</div>]]></cell>
+	</row>
+	<row id='6'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Sala 6</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Protegido</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">23/06/2011  09:45 A.M.</div>]]></cell>
+	</row>
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Sala 7</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500">23/06/2011  09:45 A.M.</div>]]></cell>
+	</row>
+</rows>

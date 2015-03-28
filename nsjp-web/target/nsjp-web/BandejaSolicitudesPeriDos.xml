@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'> 
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">YUC/PG/XX/PGE/2011/AA-320016</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">NSJYUCPG2011443333C</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">PG/201100002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abierta</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">23/08/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">26/08/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Procuraduria</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Fernando Miranda Soto </div>]]></cell>
+	</row>
+</rows>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'> 
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">NSJYUCPG20111033332</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">NSJYUCPG20114433333</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Daniel Flores de la O</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">23/08/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">23/09/2011</div>]]></cell>
+	</row>
+	<row id='2'> 
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">NSJYUCPG2011103333E</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">NSJYUCPG2011443337L</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Daniel Flores de la O</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">23/08/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">23/10/2011</div>]]></cell>
+	</row>
+</rows>

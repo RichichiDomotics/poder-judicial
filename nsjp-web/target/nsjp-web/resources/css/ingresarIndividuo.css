@@ -1,0 +1,447 @@
+/*
+* Nombre del Programa : ingresarIndividuo.css
+* Autor               : Arturo León
+* Compania            : Ultrasist
+* Proyecto            : NSJP                    Fecha: 01/03/2011
+* Marca de cambio     : N/A
+* Descripcion General : Hoja de estilos para ingresarIndividuo.jsp
+* Programa Dependiente: N/A                                                    
+* Programa Subsecuente: N/A                                                     
+* Cond. de ejecucion  : N/A                                                     
+* Dias de ejecucion   : N/A                             Horario: N/A      
+*                              MODIFICACIONES                                      
+*------------------------------------------------------------------------------          
+* Autor               :N/A                                                           
+* Compania            :N/A                                                           
+* Proyecto            :N/A                                   Fecha: N/A       
+* Modificacion        :N/A                                                          
+*------------------------------------------------------------------------------         
+*/
+
+BODY {
+	margin: 10px;
+	padding: 0;
+	font-family:"Lucida Grande","bitstream vera sans","trebuchet ms",sans-serif,verdana;
+	font-size: 12px;
+}
+
+H1 {
+	margin-bottom: 2px;
+	font-family: Garamond, "Times New Roman", Times, Serif;
+}
+
+DIV.container {
+	margin: auto;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+TEXTAREA {
+	width: 80%;
+}
+
+FIELDSET {
+	border: 1px solid #ccc;
+	padding: 1em;
+	margin: 0;
+}
+
+LEGEND {
+	color: #ccc;
+	font-size: 120%;
+}
+
+INPUT,TEXTAREA {
+	font-family: Arial, verdana;
+	font-size: 125%;
+	padding: 2px;
+
+}
+
+LABEL {
+	display: block;
+	margin-top: 10px;
+}
+
+IMG {
+	margin: 5px;
+}
+
+#general {
+	background-color: #fff;
+}
+
+.waste {
+	min-height: 1000px;
+}
+
+/*Estilos para tab de Calidad*/
+
+UL.tabNavigationCalidad {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationCalidad LI {
+	display: inline;
+}
+
+UL.tabNavigationCalidad LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+/*UL.tabNavigationCalidad LI A.selected,UL.tabNavigationCalidad LI A:hover {*/
+UL.tabNavigationCalidad LI A.selected {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationCalidad LI A:focus {
+	outline: 0;
+}
+
+div.tabsCalidad > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsCalidad > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Calidad*/
+
+/*Estilos para tab de Denunciante*/
+
+UL.tabNavigationDenunciante {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationDenunciante LI {
+	display: inline;
+}
+
+UL.tabNavigationDenunciante LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationDenunciante LI A.selected,UL.tabNavigationDenunciante LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationDenunciante LI A:focus {
+	outline: 0;
+}
+
+div.tabsDenunciante > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsDenunciante > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Denunciante*/
+
+/*Estilos para tab de Representante legal*/
+
+UL.tabNavigationRLegal {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationRLegal LI {
+	display: inline;
+}
+
+UL.tabNavigationRLegal LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationRLegal LI A.selected,UL.tabNavigationRLegal LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationRLegal LI A:focus {
+	outline: 0;
+}
+
+div.tabsRLegal > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsRLegal > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Representante legal*/
+
+/*Estilos para tab de Víctima*/
+
+UL.tabNavigationVictima {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationVictima LI {
+	display: inline;
+}
+
+UL.tabNavigationVictima LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationVictima LI A.selected,UL.tabNavigationVictima LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationVictima LI A:focus {
+	outline: 0;
+}
+
+div.tabsVictima > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsVictima > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Víctima*/
+
+/*Estilos para tab de Testigo*/
+
+UL.tabNavigationTestigo {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationTestigo LI {
+	display: inline;
+}
+
+UL.tabNavigationTestigo LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationTestigo LI A.selected,UL.tabNavigationTestigo LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationTestigo LI A:focus {
+	outline: 0;
+}
+
+div.tabsTestigo > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsTestigo > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Testigo*/
+
+/*Estilos para tab de Probable Responsable*/
+
+UL.tabNavigationPResponsable {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationPResponsable LI {
+	display: inline;
+}
+
+UL.tabNavigationPResponsable LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationPResponsable LI A.selected,UL.tabNavigationPResponsable LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationPResponsable LI A:focus {
+	outline: 0;
+}
+
+div.tabsPResponsable > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsPResponsable > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Probable Responsable*/
+
+/*Estilos para tab de Contacto Organizacional*/
+
+UL.tabNavigationCOrganizacional {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationCOrganizacional LI {
+	display: inline;
+}
+
+UL.tabNavigationCOrganizacional LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationCOrganizacional LI A.selected,UL.tabNavigationCOrganizacional LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationCOrganizacional LI A:focus {
+	outline: 0;
+}
+
+div.tabsCOrganizacional > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsCOrganizacional > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Contacto Organizacional*/
+
+/*Estilos para tab de Tutor*/
+
+UL.tabNavigationTutor {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationTutor LI {
+	display: inline;
+}
+
+UL.tabNavigationTutor LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationTutor LI A.selected,UL.tabNavigationTutor LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationTutor LI A:focus {
+	outline: 0;
+}
+
+div.tabsTutor > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsTutor > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Tutor*/
+
+/*Estilos para tab de Traductor*/
+
+UL.tabNavigationTraductor {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationTraductor LI {
+	display: inline;
+}
+
+UL.tabNavigationTraductor LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationTraductor LI A.selected,UL.tabNavigationTraductor LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationTraductor LI A:focus {
+	outline: 0;
+}
+
+div.tabsTraductor > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsTraductor > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Traductor*/
+

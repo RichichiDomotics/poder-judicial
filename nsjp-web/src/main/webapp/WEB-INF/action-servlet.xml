@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nombre del Programa : action-servlet.xml Autor : Jose Luis Compania 
+	: Ultrasist Proyecto : NSJP Fecha: dd/mm/aaaa Marca de cambio : N/A Descripcion 
+	General : Archivo de configuraciÃ³n de inyecciones por spring Programa Dependiente: 
+	N/A Programa Subsecuente: N/A Cond. de ejecucion : N/A Dias de ejecucion 
+	: N/A Horario: N/A MODIFICACIONES Autor : N/A Compania : N/A Proyecto : N/A 
+	Fecha: N/A Modificacion : N/A -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--Inicio Mapeos comunes -->
+	<bean id="converterImpl" class="com.thoughtworks.xstream.XStream" />
+	<!-- El bean converterImpl no es necesario inyectarlo, dado que el -->
+	<!-- GenericAction lo inyecta a traves de la anotacion Autowired -->
+	<!--Fin Mapeos comunes -->
+	<!--import resource="/classes/seguridad-context.xml"/-->
+	<bean id="contextApplicationContextProvider" class="mx.gob.segob.nsjp.context.ApplicationContextProvider"></bean>  
+	<bean name="/Login" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/autorizar" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/Logout" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/cargarLogin" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/cambiaUsuario" class="mx.gob.segob.nsjp.web.persona.action.CambiarContraseniaIndividuoAction"></bean>
+	<bean name="/consultarAutenticidad" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/consultaMenuRol" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/obtenerSubMenus" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/rolRedirec" class="mx.gob.segob.nsjp.web.login.action.LoginAction"></bean>
+	<bean name="/guardarModulosRol" class="mx.gob.segob.nsjp.web.rol.action.GuardarModulosRolAction"></bean>
+	<bean name="/guardarSubRol" class="mx.gob.segob.nsjp.web.rol.action.GuardarModulosRolAction"></bean>
+	<bean name="/consultaRolPapa" class="mx.gob.segob.nsjp.web.rol.action.GuardarModulosRolAction"></bean>
+	
+	
+			
+	<!-- INICIA ACTION DE AGENDAS -->
+	<bean name="/consultarActividadesUsuarioPorFechaActual" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"></bean>
+	<bean name="/InicioAgenda" class="mx.gob.segob.nsjp.web.agenda.action.ControlAgendaAction"></bean>
+	<bean name="/VerAgenda" class="mx.gob.segob.nsjp.web.agenda.action.ControlAgendaAction"></bean>
+	<bean name="/AgregaEvento" class="mx.gob.segob.nsjp.web.agenda.action.ControlAgendaAction"></bean>
+	<bean name="/EliminaEvento" class="mx.gob.segob.nsjp.web.agenda.action.ControlAgendaAction"></bean>
+	<bean name="/ModificaEvento" class="mx.gob.segob.nsjp.web.agenda.action.ControlAgendaAction"></bean>
+	<bean name="/AgregarDetalleAgenda" class="mx.gob.segob.nsjp.web.agenda.action.ControlAgendaAction"></bean>
+	<!-- TERMINA ACTION DE AGENDAS -->
+	
+	<!-- INICIA ADMINISTRACION DE CATALOGOS -->
+	<bean name="/AdministrarCatalogos" 		class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/ConstruirGridCatalogos" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/ConsultarValoresCatalogo" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/ConsultaValorDeCatalogo" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/ConsultaValorDeCatalogoDelito" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/ConsultaValorDeCatalogoSalaAudiencia" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/GuardarValorEnCatalogoDelito" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/GuardarValorEnCatalogoSalaAudiencia" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/EliminarValorEnCatalogoDelito" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/GuardarValorEnCatalogo" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/EliminarValorDeCatalogo" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<bean name="/modificarCatDiscriminante" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	
+	<bean name="/consultarValoresCatalogoAgencias" 	class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+	<!-- TERMINA ADMINISTRACION DE CATALOGOS -->
+
+	<!-- INICIA ADMINISTRACION DE PERMISOS DE ACCESO A EXPEDIENTES -->
+	<bean name="/CargarGridExpedientesPropios" 		class="mx.gob.segob.nsjp.web.expdiente.action.AsignarPermisosAFuncionarioSobreExpedienteAction"/>
+	<bean name="/CargarGridSubordinados" 			class="mx.gob.segob.nsjp.web.expdiente.action.AsignarPermisosAFuncionarioSobreExpedienteAction"/>
+	<bean name="/CargarGridExpedientesFuncionario" 	class="mx.gob.segob.nsjp.web.expdiente.action.AsignarPermisosAFuncionarioSobreExpedienteAction"/>
+	<bean name="/AsignarPermisosSobreExpedinte" 	class="mx.gob.segob.nsjp.web.expdiente.action.AsignarPermisosAFuncionarioSobreExpedienteAction"/>
+	<bean name="/EliminarPermisosSobreExpedinte" 	class="mx.gob.segob.nsjp.web.expdiente.action.AsignarPermisosAFuncionarioSobreExpedienteAction"/>
+	
+	<!-- TERMINA ADMINISTRACION DE ERMISOS DE ACCESO A EXPEDIENTES -->
+
+
+		<!-- Catalogos Ingresar datos Generales -->
+	<bean name="/ConsultarCatalogoIdioma" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+    <bean name="/ConsultarListaEstadoCivil" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+ <bean name="/ConsultarCatalogoEscolaridad" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+	<bean name="/ConsultarCatalogoReligion" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+    <bean name="/ConsultarCatalogoOcupacion" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+ <bean name="/ConsultarCatalogoNacionalidad" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+	<bean name="/ConsultarFechaCaptura" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>
+	<bean name="/ConsultarHoraCaptura" class="mx.gob.segob.nsjp.web.persona.action.IngresarDatosGeneralesAction">
+	</bean>	
+	
+<!-- Fin Ingresar datos Generales -->
+	<bean name="/cargarPaises" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+	
+	<bean name="/cargarEntFederativas" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+	
+	
+	<bean name="/cargarTipoAsent" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+	
+	<bean name="/cargarTiposDeCalle" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+
+	<bean name="/cargarCiudades" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+	
+	<bean name="/cargarDelgMun" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+	
+	<bean name="/cargarAsentColonia" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+	
+	<bean name="/ingresarTipoDeDocumentoDeIdentificacion" class="mx.gob.segob.nsjp.web.caso.action.IngresarTipoDeDocumentoDeIdentificacionAction">
+	</bean>
+	
+	<bean name="/IngresarNarrativa" class="mx.gob.segob.nsjp.web.caso.action.IngresarNarrativaAction">
+	</bean>
+	
+	<bean name="/CargarDelito" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction">
+	</bean>
+
+	<bean name="/cargarDelitosFiltrados" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"></bean>
+
+	<bean name="/consultarCatalogoDelitos" 		class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"/>
+	
+	<bean name="/cargarExpedientePorEvidencia" 	class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+
+	<!-- INICIO MANEJO DE ARANCELES -->
+		<bean name="/consultarArancelesExpediente" 	class="mx.gob.segob.nsjp.web.expdiente.action.ArancelExpedienteAction"/>
+		<bean name="/registrarArancelExpediente" 	class="mx.gob.segob.nsjp.web.expdiente.action.ArancelExpedienteAction"/>
+		<bean name="/pagarArancelExpediente" 		class="mx.gob.segob.nsjp.web.expdiente.action.ArancelExpedienteAction"/>
+		
+		<bean name="/cargarCatalogoNivelSocioeconomico" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+	<!-- FINAL MANEJO DE ARANCELES -->
+
+	<!-- INICIO MANEJO DE MULTAS -->
+		<bean name="/registrarMultaDefensor" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+		<bean name="/consultarMultasPorDefensor" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+		<bean name="/consultarMultaDefensor" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+		<bean name="/saldarMultaDefensor" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+	<!-- FINAL MANEJO DE MULTAS -->
+
+	<!-- INICIO MANEJO DE INSPECCIONES -->
+		<bean name="/registrarInspeccionExpediente" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+		<bean name="/consultarInspeccionesPorExpediente" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+		<bean name="/consultarInspeccionExpediente" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+		<bean name="/cerrarInspeccionExpediente" 	class="mx.gob.segob.nsjp.web.defensor.action.MultasDefensorAction"/>
+	<!-- FINAL MANEJO DE INSPECCIONES -->
+
+	<bean name="/CargarCatalogoTiposTelefono" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediosContactoAction"/>
+	
+	<!-- CU Ingresar Organizacion -->
+	<bean name="/CargarTipoDependencia" 					class="mx.gob.segob.nsjp.web.caso.action.IngresarOrganizacionAction"/>
+	<bean name="/CargarOrgsSectorPublico" 					class="mx.gob.segob.nsjp.web.caso.action.IngresarOrganizacionAction"/>
+	<bean name="/ConsultarTiposOrganizacion" 				class="mx.gob.segob.nsjp.web.caso.action.IngresarOrganizacionAction"/>
+	<bean name="/ConsultarTiposOrganizacionFormal" 			class="mx.gob.segob.nsjp.web.caso.action.IngresarOrganizacionAction"/>
+	<bean name="/ConsultarCatalogosIngOrganizacion" 		class="mx.gob.segob.nsjp.web.caso.action.IngresarOrganizacionAction"/>
+	<bean name="/ConsultarOrganizacionNivelesDependencias" 	class="mx.gob.segob.nsjp.web.caso.action.IngresarOrganizacionAction"/>
+		
+	<bean name="/guardarOrganizacion" 	class="mx.gob.segob.nsjp.web.organizacion.action.IngresarOrganizacionAction"/>
+	<bean name="/guardarContactoOrg" 	class="mx.gob.segob.nsjp.web.organizacion.action.IngresarOrganizacionAction"/>	
+	<bean name="/guardarRepLegalOrg" 	class="mx.gob.segob.nsjp.web.organizacion.action.IngresarOrganizacionAction"/>
+	
+	<!-- INICIO Vincular Numero de Expediente con Caso -->	
+	
+	<bean name="/consultarCasosPorFiltro" class="mx.gob.segob.nsjp.web.caso.action.VincularNumeroExpedienteConCasoAction"/>	
+	<bean name="/vincularNumeroExpedienteConCaso" class="mx.gob.segob.nsjp.web.caso.action.VincularNumeroExpedienteConCasoAction"/>
+	
+	<!-- FIN Vincular Numero de Expediente con Caso -->
+	
+	<!-- FIN CU Ingresar Organizacion -->
+	
+	<bean name="/guardarIndividuo" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+	
+	<bean name="/guardarCiudadano" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+
+	<bean name="/guardarFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.AdministrarFuncionarioAction"/>
+	
+	<bean name="/guardarFuncionarioPorNombreYPuesto" class="mx.gob.segob.nsjp.web.funcionario.action.AdministrarFuncionarioAction"/>
+	
+	<bean name="/registrarAsistenciaFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.AdministrarFuncionarioAction"/>
+	
+	<bean name="/registrarAsistenciaInvolucradoAudiencia" class="mx.gob.segob.nsjp.web.funcionario.action.AdministrarFuncionarioAction"/>
+
+	<bean name="/modificarFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.AdministrarFuncionarioAction"/>
+
+	<bean name="/ConsultarIndividuoDatos" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+
+	<bean name="/ConsultarIndividuosDetenidos" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+	
+	<bean name="/ConsultarPersonaDatos" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+<!--	Mapeo de consultar involucrado generico-->
+	<bean name="/ConsultarIndividuo" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+<!--	Fin Mapeo de consultar involucrado generico-->
+
+<!--	Mapeo de buscar Expediente-->
+
+	<bean name="/cargarTitulo" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+
+	<bean name="/generarDetalleExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+
+	<bean name="/buscarExpedientePorAlias" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+	
+	<bean name="/buscarExpedientePorEvidencia" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+	
+	<bean name="/buscarExpedientePorNombreDePersona" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+	
+	<bean name="/buscarExpedientePorNumeroDeExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+	
+	<bean name="/buscarExpedientePorNumeroDeExpedienteComparaExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+	
+	<bean name="/buscarExpedientePorNumeroDeExpedienteParaDocumentos" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+	
+	<bean name="/buscarExpedientePorAliasGeneral" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteGeneralAction"/>
+	
+	<bean name="/buscarExpedientePorEvidenciaGeneral" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteGeneralAction"/>
+	
+	<bean name="/buscarExpedientePorNombreDePersonaGeneral" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteGeneralAction"/>
+	
+	<bean name="/buscarExpedientePorNumeroDeExpedienteGeneral" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteGeneralAction"/>
+	
+	<bean name="/buscarExpedientePorNumeroDeCasoGeneral" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteGeneralAction"/>
+	
+	
+<!--	Fin Mapeo de buscar Expediente-->
+
+<!--	Mapeo de buscar Caso-->
+
+	<bean name="/buscarCasoPorAlias" class="mx.gob.segob.nsjp.web.caso.action.BuscarCasoAction"/>
+	
+	<bean name="/buscarCasoPorDelito" class="mx.gob.segob.nsjp.web.caso.action.BuscarCasoAction"/>
+	
+	<bean name="/buscarCasoPorNombreDePersona" class="mx.gob.segob.nsjp.web.caso.action.BuscarCasoAction"/>
+	
+	<bean name="/buscarCasoPorNumeroDeCaso" class="mx.gob.segob.nsjp.web.caso.action.BuscarCasoAction"/>
+	
+	<bean name="/buscarCasoPorFecha" class="mx.gob.segob.nsjp.web.caso.action.BuscarCasoAction"/>
+	
+	<bean name="/generarDetalleCaso" class="mx.gob.segob.nsjp.web.caso.action.BuscarCasoAction"/>
+	
+	
+<!--	Fin Mapeo de buscar Caso-->
+	
+
+
+
+
+
+
+<!--	Mapeo de Turno-->
+	<bean name="/GenerarTurno" class="mx.gob.segob.nsjp.web.caso.action.GenerarTurnoAtencionAction"/>
+	
+	<bean name="/generarConsultarTurnoAtencion" class="mx.gob.segob.nsjp.web.caso.action.GenerarTurnoAtencionAction"/>
+	
+	<bean name="/generarTurnoAtPublicoPJ" class="mx.gob.segob.nsjp.web.caso.action.GenerarTurnoAtencionAction"/>
+	
+	<bean name="/consultarTurnosPendientesPJ" class="mx.gob.segob.nsjp.web.caso.action.GenerarTurnoAtencionAction"/>
+	
+	
+<!--	Fin Mapeo de Turno-->
+
+	<bean name="/BusquedaCaso" class="mx.gob.segob.nsjp.web.expdiente.action.BusquedaExpedienteAction"/>
+	<bean name="/BusquedaInicialCaso" class="mx.gob.segob.nsjp.web.expdiente.action.BusquedaExpedienteAction"/>
+	<bean name="/BusquedaInicialCasoGrid" class="mx.gob.segob.nsjp.web.expdiente.action.BusquedaExpedienteAction"/>
+	<bean name="/busquedaInicialCausasPJ" class="mx.gob.segob.nsjp.web.expdiente.action.BusquedaExpedienteAction"/>
+	<bean name="/busquedaNumeroExpedientesPorCausaPJ" class="mx.gob.segob.nsjp.web.expdiente.action.BusquedaExpedienteAction"/>
+
+	<bean name="/validarNumeroDeCausa" class="mx.gob.segob.nsjp.web.expdiente.action.BusquedaExpedienteAction"/>
+		
+	<!--	Mapeo de Asociar individuo-->
+		<bean name="/consultaCatalogosCaso" class="mx.gob.segob.nsjp.web.caso.action.AsociarIndividuoAction"/>
+	<!--	Fin de Asociar individuo-->
+
+<bean name="/consultarTiposObjeto" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoAreasDependiente" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoDepartamentosDependiente" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!-- Mapeo para anular un objeto por su ID -->
+<bean name="/anularObjetoPorId" class="mx.gob.segob.nsjp.web.elemento.action.AnularElementoAction"/>
+<bean name="/validarObjPorIdEvdncNoEslbns" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<!-- Fin Mapeo para anular un onjeto por su ID -->
+<!--  Mapeo consultar catalogos de Vehiculo  -->
+
+<bean name="/consultarTiposVehiculo" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMarcasVehiculo" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarSubMarcasVehiculo" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Vehiculo  -->
+
+
+<!--  Mapeo consultar catalogos de Equipo de computo  -->
+
+<bean name="/consultarTiposEquipoComputo" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMarcasEquipoComputo" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<!--  Fin Mapeo consultar catalogos de Equipo de computo -->
+
+<!--  Mapeo consultar catalogos de Equipo telefonico  -->
+
+<bean name="/consultarTiposEquipoTel" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMarcasEquipoTel" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Equipo telefonico -->
+
+
+<!--  Mapeo consultar catalogos de Arma  -->
+
+<bean name="/consultarTiposArma" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMarcasArma" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Arma -->
+
+<bean name="/ConsultarCatalogoMedidasAlternativa" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+	<!-- COMIENZAN MAPEO PARA CONSULTAR CATALOGOS DE MEDIDAS CAUTELARES-->
+<bean name="/ConsultarCatalogoMedidasCautelares" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/ConsultarCatalogoEncargadosSeguimiento" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/guardarMedidaCautelar" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+
+<bean name="/enviarMedidaCautelarASSP" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/enviarMandamientoJudicial" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultaGridMedidasAlternasIncumplidas" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+
+	<!-- TERMINA MAPEO PARA CONSULTAR CATALOGOS DE MEDIDAS CAUTELARES-->
+	<bean name="/cancelarMedida" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/consultaGridMedidasCautelaresAlternativas" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/consultaGridMedidasCautelaresIncumplidas" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+
+<!--  Mapeo consultar catalogos de Explosivo  -->
+
+<bean name="/consultarTiposExplosivo" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Explosivo -->
+
+
+<!--  Mapeo consultar catalogos de Sustancia  -->
+
+<bean name="/consultarTiposSustancia" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Sustancia -->
+
+
+<!--  Mapeo consultar catalogos de Animal  -->
+
+<bean name="/consultarTiposAnimal" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Animal -->
+
+
+<!--  Mapeo consultar catalogos de Aeronave  -->
+
+<bean name="/consultarTiposAeronave" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMarcasAeronave" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarSubMarcasAeronave" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Aeronave  -->
+
+
+<!--  Mapeo consultar catalogos de Embarcacion  -->
+
+<bean name="/consultarTiposEmbarcacion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMarcasEmbarcacion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarSubMarcasEmbarcacion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Embarcacion  -->
+
+<!--  Mapeo consultar catalogos de Inmueble  -->
+
+<bean name="/consultarTiposInmueble" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarTiposConstruccion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<!--  Fin Mapeo consultar catalogos de Inmueble  -->
+
+<!--  Mapeo consultar catalogos de Vegetal  -->
+
+<bean name="/consultarTiposVegetal" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Vegetal  -->
+
+
+<!--  Mapeo consultar catalogos de Documento oficial  -->
+
+<bean name="/consultarTiposDocOficial" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Documento oficial -->
+
+
+<!--  Mapeo consultar catalogos de Documento oficial  -->
+
+<bean name="/consultarTiposJoya" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo consultar catalogos de Tipos de Formas  -->
+
+<bean name="/consultarCatalogoTiposFormas" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo consultar catalogos de Tipos de Eslabon  -->
+
+<bean name="/consultarCatalogoTiposEslabon" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Documento oficial -->
+
+<!--  Mapeo consultar catalogos de Obra de arte  -->
+
+<bean name="/consultarTiposObraArte" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin Mapeo consultar catalogos de Obra de arte -->
+
+<!--  Mapeo consultar catalogos de Instituciones  -->
+
+<bean name="/consultarCatalogoInstituciones" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo consultar catalogos de Areas  -->
+
+<bean name="/consultarCatalogoAreas" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoUIE" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo consultar catalogos de Calidades  -->
+<bean name="/consultarCatalogoCalidad" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo catalogos para registrar funcionario  -->
+<bean name="/consultarCatalogoPuestos" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoTipoEspecialidad" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoEspecialidad" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoFuncionarios" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoFuncionariosPorTipoEspecialidad" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo consultar catalogos de Departamentos  -->
+
+<bean name="/consultarCatalogoDepartamentos" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Mapeo consultar catalogos comunes  -->
+
+<bean name="/consultarColores" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarRelacionesHecho" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCondicion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarTiposEmpaque" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarUnidadesMedida" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarNormas" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoRoles" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoModulos" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<!--  Fin mapeo consultar catalogos comunes  -->
+
+
+<!--  INICIO MAPEOS INGRESAR OBJETOS -->
+<bean name="/ingresarVehiculo" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarEquipoComputo" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarEquipoTel" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarArma" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarExplosivo" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarSustancia" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarAnimal" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarAeronave" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarEmbarcacion" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarNumerario" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarVegetal" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarDocumentoOficial" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarJoya" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarObraDeArte" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<bean name="/ingresarOtros" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+
+<!--  TERMINA MAPEOS INGRESAR OBJETOS -->
+
+<!-- Acciones para Servidor publico -->
+<bean name="/CargarCatalogoPuesto" class="mx.gob.segob.nsjp.web.persona.action.IngresarServidorPublicoAction"/>
+<bean name="/CargarCatalogoNivelDependencia" class="mx.gob.segob.nsjp.web.persona.action.IngresarServidorPublicoAction"/>
+<bean name="/CargarCatalogoTipoDependencia" class="mx.gob.segob.nsjp.web.persona.action.IngresarServidorPublicoAction"/>
+<bean name="/CargarCatalogoDependencia" class="mx.gob.segob.nsjp.web.persona.action.IngresarServidorPublicoAction"/>
+<bean name="/ObtenerListaIndividuos" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+<!-- Termina Acciones para Servidor publico -->
+
+<!-- Acciones para ingresar denuncia o querella -->
+<bean name="/nuevoExpedienteDenuncia" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+<bean name="/nuevoExpedienteUI" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+<bean name="/nuevoExpedienteDenunciaAtTempAdmin" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+<bean name="/nuevoNumeroExpediente" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+<bean name="/nuevosNumerosExpedienteVisitaduria" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+
+<!-- Acciones para ingresar denuncia o querella -->
+
+<!-- Acciones para Atencion Temprana Penal -->
+<bean name="/regresaFechaYHoraDelServidor" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaInicialTurnosGrid" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaExpCompartidosFuncionarioLog" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaExpCompartidosFuncionarioLogAMP" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaInicialTurnosGridSinFecha" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaInicialTurnosGridRestaurativa" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaSiguienteTurno" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/CancelarTurnosGrid" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaInicialExpedientesGrid" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaExpedientesMesGrid" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/CancelarTurno" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaCanalizadosRestaurativa" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/remisionesIPH" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/busquedaCanalizadosRestaurativaStatus" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/registrafuncionarioNumeroExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaCanalizadosUnidadInvestigacion" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaExpedienteAdminAt" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaAdministrativaAction"/>
+<bean name="/ConsultaInvolucradosExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaInvolucradosExpedienteUAVD" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarDocumentosSSPCautelar" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaHechoExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaObjetosGridVisorXTipo" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaObjetosExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaObjetosExpedientePorTipo" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaObjetoPorId" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaInvolucradosPorCalidadExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/CargarDelitoAsociadosInvolucrado" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/anularRelacionDelitoPersona" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"/>
+<bean name="/consultarRelacionProbRespConDelito" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"/>
+<bean name="/ConsultarRelacionDelitosPorTodos" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultarTamanoDelitosAsociadosPorTodos" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaDelitoPorExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultarCatalogoModoParticipacionDelito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/ConsultarCatalogoClasificacionDelito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/ConsultarCatalogoLugarDelito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/ConsultarCatalogoModalidadDelito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/ConsultarCatalogoModusDelito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/ConsultarCatalogoCausaDelito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/AsociarDelitoProbableResponsable" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ExisteRelacionProbableResponsableVictimaDelito" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ConsultaDelitoPorExpedienteGrid" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ExisteDelitoGravePorIdExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/CargarProbRespsAsociadosAlDelito" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/BusquedaInicialTurnosGridAdministrativa" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaAdministrativaAction"/>
+<bean name="/BusquedaInicialTurnosGridAdministrativaSinFecha" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaAdministrativaAction"/>
+<bean name="/BusquedaSiguienteTurnoAdmin" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaAdministrativaAction"/>
+
+<bean name="/modificaSolicitudUAVD" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.DatosPersonaUAVDAction"/>
+<bean name="/cerrarSolicitudUAVD"   class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.DatosPersonaUAVDAction"/>
+<bean name="/RegistraDatosPersonaUAVD" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.DatosPersonaUAVDAction"/>
+<bean name="/consultarSesionesUAVD" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.DatosPersonaUAVDAction"/>
+
+<bean name="/consultarFuncionariosXArea" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarInstitucionesExternas" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarUnidadesEspecializadas" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/guardarDelitosAgraviadosATP" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"/>
+<bean name="/consultarActividadesPorDelitosDelExpediente" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"/>
+
+<bean name="/cargarActuaciones" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/cargarDatosGenerales" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarDocumentos" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarDocumentosPorAudiencia" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarAlertas" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarDocumentosPorOficioInvestigacionPolicial" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+
+<bean name="/registrarNotasExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarNotasExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarNotaXId" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/registraActividadExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarIndiceEstructurado" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/ingresaTeoriaCaso" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultaCuerpoOficioTeoriaCaso" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/enviarAvisosDetencion" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/obtenerNumeroCasoPorExpedienteCarpeta" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarTeoriasDelCasoExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/enviarReplicaCaso" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/obtenerConfActividadDocumento" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultaBitacoraIAM" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultaBitacoraINQ" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultaBitacoraMovObjetosAlmacen" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarEslabonesEvidencia" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarCatalogoElemento" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarAlarmas" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/actualizarAlarma" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarRelacionDefensorInvolucrado" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarAgentesUI" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarAgentesJAR" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarAudiencias" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/registraStatusExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+
+
+<!-- Acciones para Atencion Temprana Penal -->
+<bean name="/GenerarDocumento" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/CargarDocumento" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/GenerarDocumentoDirecto" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/ConsultarContenidoArchivoDigital" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+<bean name="/consultarArchivoDigitalIframe" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+<bean name="/guardarDocumentoSincrono" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/CargarArbolExpedienteEnDocumento" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/GenerarDocumentoTranscripcion" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/solicitarTranscripcionPG" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/GenerarActaAudiencia" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/consultarInvolucrado" class="mx.gob.segob.nsjp.web.persona.action.ConsultarIndividuoAction"/>  
+<bean name="/GenerarDocumentoNotificacion" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+<bean name="/GenerarDocumentoNotificacionAyudaPsicologicaUAVD" class="mx.gob.segob.nsjp.web.documento.action.GeneradorDocumentoAction"/>
+
+												<!--COMIENZAN ACCIONES PARA PODER JUDICIAL-->  
+
+<!--COMIENZAN ACCIONES PARA PODER JUDICIAL ENCARGADO NOTIFICADOR-->
+
+<bean name="/ConsultaNuevasNotificaciones" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<bean name="/acarrearIdEvento" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<bean name="/atenderSolicitudAudienciaNotificador" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<bean name="/consultaEventosPorExpediente" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<bean name="/darSeguimientoEventos" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<bean name="/consultaDetalleNotificacionesPersona" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<bean name="/agregarDestinatario" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosAction"/>
+
+<!--TERMINAN ACCIONES PARA PODER JUDICIAL ENCARGADO NOTIFICADOR-->
+
+<!--COMIENZA ACCIONES PARA PODER JUDICIAL ATENCION AL PUBLICO-->
+
+<bean name="/acarrearNuevaSolicitud" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/buscarAudienciasPorFecha" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/consultarInvolucradosVictimasYPRPorNumeroExp" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/consultaEventosPorExpedientePJATP" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/detalleAudienciasDelDia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/detalleSolicitudesPJATP" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/consultaNuevaSolicitudPJATP" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/registrarSolicitudPGATP" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/registrarSolicitudPJATP" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/consultarTipoSolicitud" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarInstitucion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/buscarAudienciaPorCausaOTOCA" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/adjuntarArchivo" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<bean name="/consultarAudienciasPorNumeroCausa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+
+
+<!--TERMINAN ACCIONES PARA PODER JUDICIAL ATENCION AL PUBLICO-->
+
+<!--COMIENZA ACCIONES PARA PODER JUDICIAL ENCARGADO ADMINISTRATIVO-->
+
+<bean name="/visorSolicitudPJENA" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENAAction"/>
+
+<bean name="/consultarSolicitudesDeAudienciaPJENA" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarDetalleSolicitudDeAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarSolicitudesOtroPJENA" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/calendarioActual" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarDisponibilidadDeSalasPorDia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarDisponibilidadDeUnaSalaPorDia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarNumeroDeSalas" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarTestigosParaAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarDisponibilidadJueces" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/guardarAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/cancelarSolicitudesDeAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/guardarEventoAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/guardarAudienciaProgramaNueva" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarCatalogoTipoAudiencia" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoTipoAudienciaValidacion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoTipoAudienciaGrid" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/guardaComplejidadTipoAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+<bean name="/consultarDetalleSolicitudOtros" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudesPJEAAction"/>
+
+
+<bean name="/visorSolicitudAudienciaPJENA" class="mx.gob.segob.nsjp.web.expdiente.action.AsociarSolicitudExpedienteAction"/>
+
+<bean name="/asociarSolicitudAExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.AsociarSolicitudExpedienteAction"/>
+
+<bean name="/consultarExpedientesPorSolicitudId" class="mx.gob.segob.nsjp.web.expdiente.action.AsociarSolicitudExpedienteAction"/>
+
+
+
+
+<!--TERMINAN ACCIONES PARA PODER JUDICIAL ENCARGADO ADMINISTRATIVO-->
+
+<!--COMIENZA ACCIONES PARA PODER JUDICIAL ENCARGADO DE SALA-->
+
+<bean name="/visorAudienciaPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/registrarSolicitudPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarAudienciaDelDiaPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/condultaGridControvercias" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/cargaGradodeParticipacion" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/cargaCatalogoCalificativa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+ 
+<bean name="/consultarInvolucradosAudienciaCalculoPena" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+ 
+<bean name="/consultarAudienciaDelDiaPJENSExpediente" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/detalleAudienciasDelDiaPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarImputadoAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarImputadoMaximaAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarInvolucradosAudienciaIndividualizacion" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarInvolucradosAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/enviarSolicitudDefensor" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarObjetosPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarResolutivosAudienciaPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/registrarResolutivosPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/modificarResolutivosPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/eliminarResolutivosPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarDetalleInvolucradoPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/modificarDatosInvolucrado" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarLeyesCodigos" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/abrirPDF" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/finalizarAudienciaPJENS" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/crearMandamientoJudicial" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarImputadosParaMandamientoXAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/recuperaIdSiguienteAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/asociarInvolucradoAAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/visorDocumentoDetalle" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSAction"/>
+
+<bean name="/consultarSentenciasPorEstatus" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/agregarMedioPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/agregarDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/consultarDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/consultarMedioPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/consultarDatosDePruebaPorFiltro" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/actualizarEstadoDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/aceptarCancelarRelacion" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/consultarMediosPruebaXDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/consultarMediosPruebaAsociadosXDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/consultarDatosPruebaAsociadosXMedioPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/consultarMediosPruebaAsociadosAlExpediente" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/relacionarMedioPruebaConDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/relacionarIndividuoMedioPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarMediosDePruebaAction"/>
+
+<bean name="/consultarImputadosXDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/asociarImputadoConDatoPrueba" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/consultarPruebasPorNumeroExpediente" class="mx.gob.segob.nsjp.pruebas.action.AdministrarDatosDePruebaAction"/>
+
+<bean name="/consultarAudienciasPorNumeroCausaYEstatus" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJATPAction"/>
+
+<!--TERMINAN ACCIONES PARA PODER JUDICIAL ENCARGADO DE SALA-->
+
+<!--COMIENZA ACCIONES PARA PODER JUDICIAL ENCARGADO DE CAUSA-->
+
+<bean name="/consultarJuecesDeAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+ 	
+<bean name="/consultarAudienciasBandejaInicialEncargadoCausa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarAudienciaPorJuicioOralPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/registrarObjetosPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/visorAudienciaPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/registrarTestigosPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarSolicitudesDeTranscripcionDeAudienciaPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/transcripcionAdudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/ordenarSolicitudesTranscripcionyAV" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/actualizarSituacionJuridica" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/buscarInvolucradosAudienciaPorCausa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/registrarMedidaAlternativa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/enviarMedidaAlterna" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarSolicitudesTransAudioVideoPorEstatus" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarDetalleSolicitudTranscripcionAudioVideo" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesTranscripcionAudioVideo"/>
+
+<bean name="/consultarSolcicitudesTranscripcionAudioVideo" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesTranscripcionAudioVideo"/>
+
+<bean name="/finalizarSolicitudTranscripcionAudioVideo" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesTranscripcionAudioVideo"/>
+
+<bean name="/ConsultaInvolucradosCausa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultaMedidasAlternativas" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/ConsultarMedidasCautelaresInvolucradoPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/ConsultarMedidasAlternasInvolucradoPJADE" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarProbablesResponsablesPorVictimaYDelito" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarCatalogoTipoMandamiento" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoTipoSentencia" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarMandamientosJudicialesPorCausa" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarMandamientosJudicialesPorPeriodo" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarCatalogoEstatusMandamiento" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/actualizarMandamientoJudicial" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarMedidasCautelaresPorNumeroExpediente" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarMedidasAlternativasPorNumeroExpediente" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarImputadosPorNumExpediente" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/consultarTurnosAccPenalPrivada" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/IngresarMenuIntermedioPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<bean name="/CargarDelitoPJENC" class="mx.gob.segob.nsjp.web.caso.action.DelitoAction"></bean>
+
+<bean name="/consultarExpedienteByIdPJENC" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"></bean>
+
+<bean name="/obtenerNUSDelInvolucreado" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENCAction"/>
+
+<!--TERMINAN ACCIONES PARA PODER JUDICIAL ENCARGADO DE CAUSA-->
+
+<!--COMIENZA ACCIONES PARA PODER JUDICIAL ENCARGADO DE SEGUNDA INSTANCIA-->
+
+<bean name="/consultaSolicitudesRecursos" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSIAction"/>
+
+<bean name="/detalleSolicitudRecurso" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSIAction"/>
+
+<bean name="/asignarNumeroExpedienteTOCA" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSIAction"/>
+
+<bean name="/consultaSolicitudesRecursoHistorico" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSIAction"/>
+
+<bean name="/consultaDocumentosMedidasCautelares" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSIAction"/>
+
+ <bean name="/consultaGridDocumentosMedidasCautelares" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJENSIAction"/>
+
+<!--TERMINAN ACCIONES PARA PODER JUDICIAL ENCARGADO DE SEGUNDA INSTANCIA-->
+
+<!--COMIEZAN ACCIONES OFICIAL ADMINISTRATIVO DE EJECUCION-->
+
+<bean name="/consultarDocumentosDeCarpeta" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/obtenerDatosGeneralesCarpeta" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/consultarSolicitudesDeBeneficiosDePreliberacion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/consultarSolicitudesDeBeneficiosDePreliberacionEstudios" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+ <bean name="/actualizaEstatusSolicitudAudiencia" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+ <bean name="/gridConsultaObjetos" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+ 
+ <bean name="/guardaObjetosCarpetaEjecucion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/registrarSolicitudEstudioCarpetaEjecucion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/consultarSolicitudesPorTipoYEstatus" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/consultarAudienciasByTipoYEstatus" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/gridCarpetaEjecucionCarpetaEjecucion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/gridHistoricoCarpetaEjecucion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/consultarSolicitudBeneficiosPreliberacionCE" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/gridSolicitaCarpetas" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/solicitarActuacionesPreliberacion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/documentosCarpetaPreliberacion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<bean name="/programarAudienciasCarpetaPreliberacion" class="mx.gob.segob.nsjp.web.carpetaejecucion.action.AdministrarCarpetaEjecucionAction"/>
+
+<!--TERMINAN ACCIONES OFICIAL ADMINISTRATIVO DE EJECUCION-->
+
+<!--COMIEZAN ACCIONES DE JUEZ-->
+
+<bean name="/obtenerDocumentosAsociados" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJJUAction"/>
+
+<bean name="/consultarResolutivosAudiencia" class="mx.gob.segob.nsjp.web.evento.action.ConsultaEventosPJJUAction"/>
+
+<!--TERMINAN ACCIONES DE JUEZ-->
+
+												<!--TERMINAN ACCIONES PARA PODER JUDICIAL-->
+									
+<bean name="/consultarDocumentosDefensoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>	
+																			
+<bean name="/guardaSolicitanteAsesoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>
+												
+<bean name="/obtenerDetalleDefensoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>
+
+<bean name="/consultarSolicitudesDefensorAsignadas" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>
+													
+<bean name="/consultarSolicitudesPorAtender" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>
+													
+<bean name="/cambiarDefensorAsignado" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>	
+												
+<bean name="/consultarDefensorAsignado" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>	
+			
+<bean name="/consultarSolicitudesDeDefensor" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>
+												
+<bean name="/consultarAvisosDeDetencion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudDefensorAction"/>
+
+<bean name="/solicitudesNoAtendidasAsesoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/solicitudesNoEnviadasAsesoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/busquedaSiguienteTurnoDefensoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/GuardaSolicitud" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/actualizaEstatusAvisoDesignacion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/GuardaSolicitante" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/consultarExpedienteDefensoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/GeneraNumeroAcuse" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/IngresarMenuIntermedio" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+
+<bean name="/IngresarMenuIntermedioTempAdmin" class="mx.gob.segob.nsjp.web.caso.action.ConsultaAction"/>
+
+<bean name="/GuardaMotivo" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/atualizarEstatusSolicitudDefensoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/consultarProbablesResponsablesDetenidos" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/consultarProbablesResponsables" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/consultarDefensoresActivos" class="mx.gob.segob.nsjp.web.defensor.action.RegistroVacacionesIncapacidadesAction"/>
+
+<bean name="/registrarVacacionesIncapacidad" class="mx.gob.segob.nsjp.web.defensor.action.RegistroVacacionesIncapacidadesAction"/>
+
+<bean name="/registrarAvisoDetencion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/SolicitudesNoAtendidas" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/SolicitudesNoAtendidasAtencionTemprana" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/solicitudesNoEnviadasAtencionTemprana" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/SolicitudesNoAtendidasPoderJudicial" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/SolicitudesNoAtendidasGrid" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/SolicitudesDefensorGrid" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/SolicitudesDefensor" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/DesignarAbogadoDefensorCoordinador" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/DesignarAbogadoDefensorExpediente" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/solicitarAbogadoDefensorExterno" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/ConsultarListaEstadoExpediente" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/ActualizaEstatusSolicitud" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/actualizaEstatusAvisoDetencion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/ActualizarEtapaExpedienteSolicitudDefensoria" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<bean name="/registrarAvisoDesignacion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+ <bean name="/recibirDesignaciones" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+ 
+ <bean name="/ActualizaEstatusDesignacion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+
+<!-- INICIO VISOR EXPEDIENTE DEFENSORIA -->
+
+<bean name="/visorExpedienteDefensoria" 		class="mx.gob.segob.nsjp.web.expdiente.action.VisorExpedienteDefensoriaAction"/>
+<bean name="/consultarInvolucradoDefensoria" 	class="mx.gob.segob.nsjp.web.expdiente.action.VisorExpedienteDefensoriaAction"/>
+
+<!-- FINAL VISOR EXPEDIENTE DEFENSORIA -->
+ 
+
+<!-- PJ Solicitud de transcripcion -->
+<bean name="/CargaTranscripcionResolutivos" class="mx.gob.segob.nsjp.web.evento.action.ConsultarEventosPJAudienciaResolutivaAction"/>
+
+<bean name="/CargaResolutivos" class="mx.gob.segob.nsjp.web.evento.action.ConsultarEventosPJAudienciaResolutivaAction"/>
+
+<bean name="/CargaPlantillas" class="mx.gob.segob.nsjp.web.evento.action.ConsultarEventosPJAudienciaResolutivaAction"/>
+
+<bean name="/MarcarAudienciaResolutivos" class="mx.gob.segob.nsjp.web.evento.action.ConsultarEventosPJAudienciaResolutivaAction"/>
+
+<bean name="/SolicitudesBeneficios" class="mx.gob.segob.nsjp.web.evento.action.ModuloAdministrativoEjecucionAction"/>
+
+<bean name="/SolicitudesBeneficiosPreliberacion"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/BuscaCarpetaEjecucion"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/BuscaCarpetaEjecucionPorCausa"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/AudienciadeEjecucion"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/CarpetaEjecucion"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/Historico"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+
+<bean name="/ConsultarDocumentosAudiencia"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/ConsultarDocumentosAudienciaPorCausa"	class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudBeneficiosPreliberacionPJAction"/>
+
+<bean name="/ConsultaDefensor"	class="mx.gob.segob.nsjp.web.defensor.action.TareaDefensorAction"/>
+<bean name="/ConsultarCatalogoActividades"	class="mx.gob.segob.nsjp.web.defensor.action.TareaDefensorAction"/>
+<bean name="/AsignarCargaTrabajo"	class="mx.gob.segob.nsjp.web.defensor.action.TareaDefensorAction"/>
+<bean name="/consultarBitacoraPorExpediente"	class="mx.gob.segob.nsjp.web.defensor.action.TareaDefensorAction"/>
+
+<bean name="/ConsultaTareasDefensor"	class="mx.gob.segob.nsjp.web.defensor.action.ActualizarTareaDefensorAction"/>
+
+<bean name="/AsignarCargaTrabajoActualizado"	class="mx.gob.segob.nsjp.web.defensor.action.ActualizarTareaDefensorAction"/>
+
+<bean name="/ConsultarExpedientesUsuarioArea"	class="mx.gob.segob.nsjp.web.defensor.action.AdministrarActuacionDefensoriaAction"/>
+
+<bean name="/ConsultarIntegracion"	class="mx.gob.segob.nsjp.web.defensor.action.AdministrarActuacionDefensoriaAction"/>
+
+<bean name="/consultarExpedientesEtapa"	class="mx.gob.segob.nsjp.web.defensor.action.AdministrarActuacionDefensoriaAction"/>
+
+<!-- DEFENSORIA EN INTEGRACION -->
+
+<bean name="/GuardaInvolucradoIntegracion"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaenIntegracionAction"/>
+
+<bean name="/consultarDocumentosPorExpediente"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaenIntegracionAction"/>
+
+ <bean name="/GuardaInvolucradoIntegracionMediaFiliacion"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaenIntegracionAction"/>		
+
+ <bean name="/GuardaDelitosIntegracion"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaenIntegracionAction"/>		 
+ 
+ <bean name="/GuardaHechosIntegracion"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaenIntegracionAction"/>	
+
+ <bean name="/consultarSolicitudesPorNumeroExpedienteYTipo"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaTecnicaAction"/>	
+ 
+ <bean name="/ConsultarDefensaTecnica"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaTecnicaAction"/>	
+	
+ <bean name="/ConsultarDefensaEjecucion"	class="mx.gob.segob.nsjp.web.defensor.action.AdministrarDefensaEjecucionAction"/>
+	
+ <bean name="/consultarAudienciasDefensor"	class="mx.gob.segob.nsjp.web.defensor.action.AudienciasDefensorAction"/>			
+ 
+ <bean name="/consultarDetalleAudienciaDefensoria"	class="mx.gob.segob.nsjp.web.defensor.action.AudienciasDefensorAction"/>
+	
+ <bean name="/ConsultarTipoDiligencias"		class="mx.gob.segob.nsjp.web.defensor.action.SolicitarDiligenciasAction"/>			
+	
+ <bean name="/GenerarSolicitudDiligencia"	class="mx.gob.segob.nsjp.web.defensor.action.SolicitarDiligenciasAction"/>		
+ 
+ <bean name="/registrarDiligencia"	class="mx.gob.segob.nsjp.web.defensor.action.SolicitarDiligenciasAction"/>		
+ 
+ <bean name="/solictarCarpetaInvestigacion"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaTecnicaAction"/>
+	
+ <bean name="/colocarExpedienteParaDefensaTecnica"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaTecnicaAction"/>	
+<!-- DEFENSORIA RESTAURATIVA -->
+
+ <bean name="/asociarActividadExpediente"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/> 
+ 
+ <bean name="/adjuntarDocumentoAsociadoAExpediente"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/> 			
+ 			
+ <bean name="/consultaDetalleExpedienteDefensoria"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/> 			
+			
+ <bean name="/buscarExpedientePorUsuarioEtapa"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/>	
+ 
+ <bean name="/cambiarEtapaDelExpediente"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/>	
+
+ <bean name="/cambiarSituacionDelDefendido"	class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/>	
+
+ <bean name="/ConsultarFuncionariosSubordinadosEtapa"	class="mx.gob.segob.nsjp.web.defensor.action.ConsultarFuncionariosSubordinadosAction"/>	
+
+<bean name="/ConsultarExpedientesPorUsuarioYEtapa"	class="mx.gob.segob.nsjp.web.defensor.action.ConsultarFuncionariosSubordinadosAction"/>	
+
+<!-- COMIENZAN ACCIONES PARA Media Filiacion -->
+
+<bean name="/ConsultarCatalogoTamanoBoca" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoTipoCara" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoFormaMenton" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoTipoMenton" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoTez" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoInclinacionMenton" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+<bean name="/ConsultarCatalogoColorCabello" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoFormaCabello" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoCalvieTipo" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoCabelloImplantacion" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoCantidadCabello" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+<bean name="/ConsultarCatalogoOreja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoTamanoOreja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoLobuloParticularidad" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoLobuloDimension" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoLobuloAdherencia" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoHelixAnterior" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoHelixPosterior" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoHelixContorno" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoHelixAdherencia" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoFormaOreja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+<bean name="/ConsultarCatalogoInclinacionFrente" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoFrenteAncho" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoFrenteAltura" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoRaizNariz" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoBaseNariz" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoAlturaNariz" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoAnchoNariz" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoProminencia" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoEspesorLabioSuperior" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoEspesorLabioInferior" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoComisuras" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoAlturaNasoLabial" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoFormaOjos" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoTamanoOjos" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/ConsultarCatalogoColorOjos" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+<bean name="/consultarCatalogoImplantacionCeja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/consultarCatalogoFormaCeja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/consultarCatalogoTamanoCeja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/consultarCatalogoTipoSangre" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+<bean name="/consultarComplexion" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+<bean name="/consultarOrejaLobContorno" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+ <bean name="/consultarHelixOriginal" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+  
+  <bean name="/consultarDireccionCeja" class="mx.gob.segob.nsjp.web.persona.action.IngresarMediaFiliacionAction"/>
+
+
+<!-- TERMINAN ACCIONES PARA Media Filiacion -->
+
+<!-- COMIENZAN ACCIONES PARA HECHOS -->
+<bean name="/ingresarHecho" class="mx.gob.segob.nsjp.web.hecho.action.IngresarHechosAction"/>
+<!-- TERMINAN ACCIONES PARA HECHOS -->
+
+		<!-- COMIENZAN ACCIONES PARA DEFENSORIA-->
+					
+<bean name="/consultarCentroDetencionPorId" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+		
+<bean name="/cargarCentroDetencion" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitudCiudadanaDefensorAction"/>
+		
+<bean name="/cargarTipoLugarDetencion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+	
+<bean name="/consultarLineasDeInvestigacion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>	
+	
+<bean name="/consultarDatosUsuario" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarFuncionarioANotificar" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarFuncionarioANotificarXDiscriminanteYRol" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+
+<bean name="/guardarSolicitudServicioPericial" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/guardarSolicitudEvidencia" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/cargarCatalogoTipoAsesoria" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoEspecialidadPericial" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarSolicitudesPericialesNoAtendidas" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/consultarSolicitudesPericialesNoAtendidasCoordinadorPerDef" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarSolicitudesPericialesEnProceso" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/consultarSolicitudesPericialesEnProcesoCoordinadorPerDef" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarSolicitudesPericialesTerminadas" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/consultarSolicitudesPericialesTerminadasCoordinadorPerDef" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarSolicitudesPericialesPorExpediente" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+				
+<bean name="/solicitudEvidenciasPorEstatus" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<!--
+Actions para los almacenes
+-->
+<bean name="/existeFuncionarioPorNombreInstitucionYPuesto" class="mx.gob.segob.nsjp.almacen.action.DarDeBajaIndicioOEvidencia"/>
+<bean name="/registrarBajaEvidencia" class="mx.gob.segob.nsjp.almacen.action.DarDeBajaIndicioOEvidencia"/>
+<bean name="/consultarCatalogoTipoBajaEvidencia" class="mx.gob.segob.nsjp.almacen.action.DarDeBajaIndicioOEvidencia"/>
+<bean name="/consultarEvidenciasEnAlmacen" class="mx.gob.segob.nsjp.almacen.action.RegistrarSalidasDelAlmacenAction"/>
+<bean name="/consultarEvidenciasXCadenaCustodiaASDA" class="mx.gob.segob.nsjp.almacen.action.AdministrarSalidasDeAlmacenAction"/>
+<bean name="/consultarCadenaCustodiaXFolio" class="mx.gob.segob.nsjp.almacen.action.AdministrarSalidasDeAlmacenAction"/>
+<bean name="/consultarCatalogoTipoAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarEntradasDeAlmacenAction"/>
+<bean name="/consultarAlmacenesPorTipo" class="mx.gob.segob.nsjp.almacen.action.SeleccionarAlmacenDeEvidenciasAction"/>
+<!--
+Actions para consultar notificaciones
+-->
+
+
+<bean name="/generarNotificacion" class="mx.gob.segob.nsjp.web.notificacion.action.GenerarNotificacionAction"/>
+<bean name="/enviarNotificacionByWebService" class="mx.gob.segob.nsjp.web.notificacion.action.GenerarNotificacionAction"/>
+<bean name="/consultaDestinatarios" class="mx.gob.segob.nsjp.web.notificacion.action.GenerarNotificacionAction"/>
+<bean name="/armaNotificacion" class="mx.gob.segob.nsjp.web.notificacion.action.GenerarNotificacionAction"/>
+<bean name="/consultarNotificacion" class="mx.gob.segob.nsjp.web.notificacion.action.ConsultarNotificacionesAction"/>
+<bean name="/consultarNotificacionesXUsuario" class="mx.gob.segob.nsjp.web.notificacion.action.ConsultarNotificacionesAction"/>
+<!--
+Action para SolicitarAudiencia
+-->
+<bean name="/consultarCasoPorExpediente" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitarAudienciaAction"/>
+
+<bean name="/consultarInvolucradoPorCalidadCaso" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitarAudienciaAction"/>
+<bean name="/validarExisteCaso" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitarAudienciaAction"/>
+<bean name="/enviarSolicitudAudiencia" class="mx.gob.segob.nsjp.web.solicitud.action.SolicitarAudienciaAction"/>
+<!--
+Fin solicitar audiencia
+-->
+		<!-- ACCIONES PARA PERICIALES -->
+<bean name="/consultaSolicitudesEvidenciasPorId" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/solicitudesEvidenciaConcluidasPerito" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/consultaResguardoEvidencias" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/consultaDetalleResguardoEvidencias" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/solicitudAsesoriasPorEstatus" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarPeritosADesignar" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultarPeritosDesignados" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/guardarPeritosDesignados" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultaDetalleSolicitudPericial" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/asignacionesRecibidasNoAtendidas" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultarDetalleDeSolicitud" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/confirmarAsignacionDePerito" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultarEvidenciasADevolver" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarEvidenciasDeCadenaDeCustodia" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultarPeritosLibresDeEvidencia" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultarSolicitudesPericialesPeritoEnProceso" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+<bean name="/crearDictamenParaSolicitudPericial" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+<bean name="/colocarExpedienteParaSolicitudPericial" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+<bean name="/terminarSolicitudPericialPerito" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+<bean name="/finalizarDictamenInformePericialPeritoAMP" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+<bean name="/guardaAsignacionEvidencia" class="mx.gob.segob.nsjp.web.pericial.action.DesignarPeritoAction"/>
+
+<bean name="/consultarPlantillasPorTipo" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+
+<bean name="/crearOEditarPlantilla" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+
+<bean name="/consultarCamposForma" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+
+<bean name="/ConsultaExpedientesDocumento" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+
+<bean name="/guardarPlantilla" class="mx.gob.segob.nsjp.web.documento.action.ConsultarDocumentoAction"/>
+
+<bean name="/consultarEvidenciasCadenaDeCustodia" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+
+<bean name="/consultarDocumentosAsociadosASolicitud" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+<bean name="/consultarDocumentosPropiosAsociadosASolicitudPericial" class="mx.gob.segob.nsjp.web.pericial.action.AtenderSolicitudPericialAction"/>
+
+		<!-- TERMINAN ACCIONES PARA DEFENSORIA-->
+		
+		<!-- COMIENZAN ACCIONES PARA ADMINISTRADOR SISTEMA -->
+		
+<bean name="/consultarCatalogoDiasInhabiles" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/eliminarDiaInhabil" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/obtenerNombreAgencia" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/ingresarDiaInhabil" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/consultarRolesDelSistema" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/darDeAltaUsuarioEnSistema" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/cargarFuncionarioRegistrado" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/consultarUsuarioPorClaveFuncionario" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/modificarUsuarioEnSistema" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+<bean name="/consultarRolesUsuarioPorClaveFuncionario" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+<bean name="/anularUsuario" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+<bean name="/buscarUsuarioEnSesion" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+
+<bean name="/consultarCatalogoAgenciasPGJ" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarTribunalesXDistritoId" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarTribunalesXDistritoIdSinWS" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarDiscriminantesXDistritoSinWSInstitucion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarDestinararioXTribunal" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarDestinararioXTribunalSinWS" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+	
+		<!-- TERMINAN ACCIONES PARA ADMINISTRADOR SISTEMA -->
+		
+		<!-- COMIENZAN ACCIONES PARA SEGURIDAD PUBLICA -->
+<bean name="/enviarAvisosDetencionIPH" class="mx.gob.segob.nsjp.web.seguridadPublica.action.SeguridadPublicaAction"/>
+		
+<bean name="/consultarCatalogoEtapaExpediente" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoSituacionJuridica" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+	
+<bean name="/consultarCatalogoTipoDiligencia" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+
+<bean name="/consultarCatalogoTipoTarea" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+				
+<bean name="/consultarFuncionarioRolComandantePoliciaMinisterial" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+
+<bean name="/buscarFuncionarioPorId" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+	
+<bean name="/consultarSolicitudesMandatoJudicial" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+
+<bean name="/generarExpedienteSSPPolicia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+
+<bean name="/guardaQejaCiudadana" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+
+<bean name="/guardarLugarDeLosHechos" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/consultaGridAvisosAuxilio" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/consultarAvisoAuxilioXIdSSPPolicia" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/asignarMotivoRechazoAvisoHDelictivo" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/enviarAvisoHDelictivo" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/procesarAvisoHDelictivo" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+
+<bean name="/consultaGridQuejasPEndientes" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+<bean name="/consultaGridQuejasConcluidas" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+
+<bean name="/buscarFuncionarioPorNombre" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+	
+<bean name="/consultarQuejaCiudadanaXIdSSPPolicia" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>	
+		
+<bean name="/consultarCatalogoTipoQueja" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+<bean name="/consultarCatalogoRechazoQueja" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+<bean name="/asignarMotivoRechazoQuejaCiudadana" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+<bean name="/consultarCatalogoRechazoAviso" class="mx.gob.segob.nsjp.web.solicitud.action.ConsultarSolicitudSSPAction"/>
+		
+<bean name="/consultarSolicitudesDeTrasladoDeImputadoNoAtendidas" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesDeTrasladoDeImputadosSSPAction"/>
+
+<bean name="/consultarSolicitudesDeTrasladoDeImputadoEnProceso" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesDeTrasladoDeImputadosSSPAction"/>
+
+<bean name="/consultarSolicitudesDeTrasladoDeImputadoTerminadas" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesDeTrasladoDeImputadosSSPAction"/>
+
+<bean name="/consultarSolicitudesDeDescarcelacionNoAtendidas" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesDeDescarcelacionSSPAction"/>
+
+<bean name="/consultarSolicitudesDeDescarcelacionEnProceso" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesDeDescarcelacionSSPAction"/>
+
+<bean name="/consultarSolicitudesDeDescarcelacionTerminadas" class="mx.gob.segob.nsjp.web.solicitud.action.AdministrarSolicitudesDeDescarcelacionSSPAction"/>
+	
+<bean name="/consultarPertenencias" class="mx.gob.segob.nsjp.web.objeto.action.ConsultarPertenenciasAction"/>
+
+<bean name="/eliminarPertenencias" class="mx.gob.segob.nsjp.web.objeto.action.ConsultarPertenenciasAction"/>
+
+<bean name="/ingresarPertenencias" class="mx.gob.segob.nsjp.web.objeto.action.ConsultarPertenenciasAction"/>
+
+<bean name="/registrarDetenido" class="mx.gob.segob.nsjp.web.persona.action.IngresarDetenidoAction"/>
+
+<bean name="/generarExpedienteSSP" class="mx.gob.segob.nsjp.web.seguridadPublica.action.SeguridadPublicaAction"/>
+<bean name="/consultarSolicitudesTrasladoPorEstatus" class="mx.gob.segob.nsjp.web.seguridadPublica.action.SeguridadPublicaAction"/>
+
+<bean name="/consultarDocumentosAsociadosAMedidaCautelar" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.AdministrarMedidasCautelaresSSPAction"/>
+
+		<!-- TERMINAN ACCIONES PARA SEGURIDAD PUBLICA -->
+		
+<bean name="/registrarSolicitud" class="mx.gob.segob.nsjp.web.solicitud.action.ElaborarSolicitudAction"/>
+		
+		<!-- COMIENZAN ACCIONES PARA SSP-->
+		
+<!-- ATENCION ADMINISTRATIVA NO PENAL -->
+<bean name="/ingresarActaCircunstanciada" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+<bean name="/consultarActaCircunstanciada" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+<bean name="/consultaContactosTelefono" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+<bean name="/consultaContactosCorreo" class="mx.gob.segob.nsjp.web.persona.action.IngresarIndividuoAction"/>
+<bean name="/consultaContactosTelefonoImplicado" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/consultaContactosCorreoImplicado" class="mx.gob.segob.nsjp.web.aviso.action.SolicitudApoyoAction"/>
+<bean name="/consultarCatalogoTipoAtencionAtNoPenal" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultaTiposAtencionSeleccionadas" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaAdministrativaAction"/>
+
+
+<!-- FIN ATENCION ADMINISTRATIVA NO PENAL -->
+
+<!-- Inicia Relacionar Elementos-->
+<bean name="/consultarRelacionesXExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<bean name="/consultarElementosPorExpediente" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<bean name="/anularElemento" class="mx.gob.segob.nsjp.web.elemento.action.AnularElementoAction"/>
+<bean name="/consultarRelacionesElementoXId" class="mx.gob.segob.nsjp.web.elemento.action.AnularElementoAction"/>
+<bean name="/consultarCatRelacionesXCatCategoria" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<bean name="/consultarCatalogosDeCategoriasDeRelacion" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<bean name="/anularRelacionDeElementos" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<bean name="/validarRelacion" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<bean name="/registrarRelacion" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.RelacionarElementosAction"/>
+<!-- Fin Relacionar Elementos-->
+<!-- Inicia Consultar Personal Operativo-->
+<bean name="/consultarPersonalOperativoAction" class="mx.gob.segob.nsjp.web.persona.action.consultarPersonalOperativoAction"/>
+<bean name="/consultarFuncionarioPorDepartamento" class="mx.gob.segob.nsjp.web.persona.action.consultarPersonalOperativoAction"/>
+<bean name="/consultarCatalogoEspecialidadSinTipo" class="mx.gob.segob.nsjp.web.persona.action.consultarPersonalOperativoAction"/>
+<!-- Fin Consultar Personal Operativo-->
+
+<!-- ACCIONES PARA CADENA DE CUSTODIA -->
+<bean name="/guardarRegCadenaDeCustodia" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultarInventarioDeEvidenciasXNumExp" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/ConsultaEvidenciasCadenaCustodiaPorExpediente" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/ConsultaEvidenciasCadenaCustodiaPorExpedienteNoAsentadas" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/ConsultaEvidenciasXCadenaCustodia" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/guardarObjetoNoAsentadoEnCadCus" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/guardarEslabonCadenaDeCustodia" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultaFuncionarioFirmado" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultarCadenasCustodiaDelExp" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultarCadenaDeCustodiaPorId" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultarEslabonesEvidenciaPorId" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultarCadCusUsuarioNoPresente" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/consultarCadCusUsuarioPresente" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<bean name="/eliminarEvdncDeCdnCstd" class="mx.gob.segob.nsjp.web.cadenadecustodia.action.IngresarCadenaCustodiaAction"/>
+<!-- fin ACCIONES PARA CADENA DE CUSTODIA -->
+
+<!--  ACCIONES UNIDAD DE INVESTIGACION -->
+<bean name="/consultarAvisosNuevosPosiblesHechosDel" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/cambiarEstatusAvisoPosHechoDlctv" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/consultaPosibleHechoDelictivoPorId" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/consultaSolsXAtnder" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/consultaSolsGeneradas" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/consultaDetalleSolicitudXAtender" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/consultaDetalleSolicitudGenerada" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<bean name="/consultaTiposSolsXArea" class="mx.gob.segob.nsjp.web.hecho.action.PosibleHechoDelictivoAction"/>
+<!--  FIN ACCIONES UNIDAD DE INVESTIGACION -->
+
+<bean name="/consultarAgentesDelMinisterioPublico" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+
+<bean name="/consultaContactosTelefonoFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+
+<bean name="/consultaContactosCorreoFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+
+
+<bean name="/consultarDocumentosRecibidos" class="mx.gob.segob.nsjp.web.pericial.action.EvaluarDocumentosRecibidosAMP"/>
+
+<bean name="/consultarDetalleDictamen" class="mx.gob.segob.nsjp.web.pericial.action.EvaluarDocumentosRecibidosAMP"/>
+
+<bean name="/consultarNotasPorDocumento" class="mx.gob.segob.nsjp.web.pericial.action.EvaluarDocumentosRecibidosAMP"/>
+
+<bean name="/consultarDetalleNota" class="mx.gob.segob.nsjp.web.pericial.action.EvaluarDocumentosRecibidosAMP"/>
+
+<bean name="/guardarNota" class="mx.gob.segob.nsjp.web.pericial.action.EvaluarDocumentosRecibidosAMP"/>
+
+<!-- Inicia action Ubicar Expediente -->
+<bean name="/ubicarExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.UbicarExpedienteAction"/>
+<bean name="/buscarExpedienteAlmacenPorExpedienteId" class="mx.gob.segob.nsjp.web.expdiente.action.UbicarExpedienteAction"/>
+<bean name="/asociarExpedienteAlmacen" class="mx.gob.segob.nsjp.web.expdiente.action.UbicarExpedienteAction"/>
+<bean name="/seleccionarAlmacenExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.SeleccionarAlmacenExpedienteAction"/>
+<bean name="/buscarAlmacenes" class="mx.gob.segob.nsjp.web.expdiente.action.SeleccionarAlmacenExpedienteAction"/>
+<!-- Termina action Ubicar Expediente -->
+
+<!-- Inicia action Solicitud Servicios Periciales -->
+<bean name="/consultarCatalogoEstudiosXEspecialidad" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCadenaCustodiaXNumeroExpediente" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/enviarEvidenciasSolicitudServicioPericial" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/consultarEvidenciasSolicitud" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/enviarSolicitudDesignarPerito" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/enviarSolicitudPeritoCoordPerDef" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<bean name="/guardaAutorizarEvidencia" class="mx.gob.segob.nsjp.web.pericial.action.SolicitarServiciosPericialesAction"/>
+<!-- Termina action Solicitud Servicios Periciales -->
+
+<!--  Inicia action Medidas Cautelares SSP-->
+<bean name="/consultaGridMedidasCautelares" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/consultarCatalogoPeriodicidad" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarMedidaCautelarPorId" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/crearDocumentoParaMedidaCautelar" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.AdministrarMedidasCautelaresSSPAction"/>
+<bean name="/asociarMedidaCautelarConArchivoDigital" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.AdministrarMedidasCautelaresSSPAction"/>
+<bean name="/colocarDocumentoParaMedidaCautelar" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.AdministrarMedidasCautelaresSSPAction"/>
+<bean name="/generarCalendarizacion" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/consultarCalendarizacionPorMedidaIdReducido" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/actualizarCumplimiento" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<bean name="/consultarCalendarizacionPorMedidaId" class="mx.gob.segob.nsjp.web.MedidasCautelares.Action.MedidasCautelaresAction"/>
+<!--  Termina action Medidas Cautelares SSP-->
+
+<!--  Inicia action Medidas Alternativas SSP-->
+<bean name="/consultaGridMedidasAlternas" class="mx.gob.segob.nsjp.web.MedidasAlternas.action.MedidasAlternasAction"/>
+<bean name="/consultarMedidaAlternaPorId" class="mx.gob.segob.nsjp.web.MedidasAlternas.action.MedidasAlternasAction"/>
+<!--  Termina action Medidas Alternativas SSP-->
+
+<bean name="/consultarSolicitudesUAVDNoAtendidas" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AdministracionSolicitudesUAVDAction"/>
+<bean name="/consultarSolicitudesUAVDEnProceso" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AdministracionSolicitudesUAVDAction"/>
+<bean name="/consultaDetalleDeSolicitudPorId" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AdministracionSolicitudesUAVDAction"/>	
+<bean name="/actualizaEstatusSolicitudUAVD" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AdministracionSolicitudesUAVDAction"/>	
+<bean name="/asignarNumeroExpedienteUAVD" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AdministracionSolicitudesUAVDAction"/>	
+
+<!--  ACCIONES INFORME POLICIAL HOMOLOGADO -->
+<bean name="/generarFolioIPH" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarPersonalOperativoIPH" class="mx.gob.segob.nsjp.web.persona.action.consultarPersonalOperativoAction"/>
+<bean name="/consultaFuncionarioSuperior" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarCatalogoTipoParticipacion" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarCatalogoTurnoLaboral" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarSubtipoEvento" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultaCatalogoTipoCarretera" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/guardarDatosGeneralesIPH" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarDatosFuncionario" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarIPHs" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarIPHPorNumeroDeFolio" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/consultarInformePolicialHomologadoPorFolio" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+<bean name="/generarInformeIPH" class="mx.gob.segob.nsjp.web.seguridadPublica.action.InformePHAction"/>
+
+	
+<bean name="/EnviarCarpeta" class="mx.gob.segob.nsjp.web.persona.action.EnviarCarpetaInvestigacionAction"/>
+<bean name="/obtenImagenDeElemento" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+<bean name="/cargarTiposObjeto" class="mx.gob.segob.nsjp.web.objeto.action.IngresarObjetoAction"/>
+<bean name="/obtenImagenDeFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+<bean name="/tieneImagenFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+<bean name="/consultarFuncionariosCoordinadoresXDicriminante" class="mx.gob.segob.nsjp.web.funcionario.action.ConsultarFuncionarioAction"/>
+<bean name="/actualizarCatDiscriminanteDeExpediente" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+
+<bean name="/buscarReincidenciaDeVehiculo" class="mx.gob.segob.nsjp.web.elemento.action.BuscarReincidenciasDeElementoAction"/>
+<bean name="/buscarReincidenciaDePersona" class="mx.gob.segob.nsjp.web.elemento.action.BuscarReincidenciasDeElementoAction"/>
+<bean name="/existeReincidenciaDeProbablesResponsables" class="mx.gob.segob.nsjp.web.elemento.action.BuscarReincidenciasDeElementoAction"/>
+<bean name="/excedeMediaAritmeticaDelitos" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+<bean name="/consultarReincidenciaXElemento" class="mx.gob.segob.nsjp.web.elemento.action.BuscarReincidenciasDeElementoAction"/>
+<bean name="/registrarReincidenciasXElemento" class="mx.gob.segob.nsjp.web.elemento.action.BuscarReincidenciasDeElementoAction"/>
+
+<bean name="/ingresarImagenDelElementoPResponsable" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoPResponsablePJENS" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/obtenImagenDelElemento" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoEquipComputo" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoEquipTelefonico" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoArma" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoVehiculo" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoExplosivo" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoSustancia" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoAnimal" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoFuncionario" class="mx.gob.segob.nsjp.web.funcionario.action.AdministrarFuncionarioAction"/>
+<bean name="/ingresarImagenDelElementoObraDeArte" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoJoya" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoDocOfic" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoVegetal" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoNumerario" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoAeronave" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+<bean name="/ingresarImagenDelElementoEmbarcacion" class="mx.gob.segob.nsjp.web.elemento.action.AdjuntarFotoDeElementoAction"/>
+
+<bean name="/graficaDenunciaVSTipoDelito" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaDenunciasVSTipoDelitoAction"/>
+<bean name="/graficaDeterminacionPorDenuncia" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaDeterminacionPorDenunciaAction"/>
+<bean name="/graficaDenunciasProbablesResponsablesDetenidos" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaDenunciasProbablesResponsablesDetenidosAction"/>
+<bean name="/graficaPricipalesDelitos" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaPrincipalesDelitosAction"/>
+<bean name="/graficaDenunciasTiempo" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaDenunciasTiempoAction"/>
+<bean name="/graficaDetencionesPorTipo" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaDetencionesPorTipoAction"/>
+<bean name="/graficaInformesElaborados" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaInformesElaboradosAction"/>
+<bean name="/graficacCasosRemitidos" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaCasosRemitidosAction"/>
+<bean name="/graficaSeguimientoMedidasCautelares" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaSeguimientoMedidasCautelaresAction"/>
+<bean name="/graficaSeguimientoMedidasAlternas" class="mx.gob.segob.nsjp.web.graficacion.action.GraficaSeguimientoMedidasAlternasAction"/>
+
+<bean name="/visorReportes" class="mx.gob.segob.nsjp.web.graficacion.action.ReportesAction"/>
+
+<bean name="/consultarSolicitudesDeAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/generaInventarioDeAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/consultarEvidenciaPorId" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/consultarDocumentosXIdEvidencia" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/consultarEvidenciasNoDevueltas" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/actualizarEstatusEvidencia" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/guardarAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+
+<bean name="/consultarCatalogoFuncionariosAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/consultargridEncargadosAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/asociaFuncionarioAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/removerFuncionarioAlmacen" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/consultarEvidenciaPorAlmacenoExpediente" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+<bean name="/consultarAlmacenXID" class="mx.gob.segob.nsjp.almacen.action.AdministrarAlmacenAction"/>
+
+<bean name="/registrarConvenio" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/consultarPagosDePrimerConvenio" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/consultarPrimerConvenio" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/consultarConvenios" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/consultarDetalleConvenio" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/actualizaConvenio" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/consultarPagosDeDetalleConvenio" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/horaActual" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<bean name="/consultarExpedientesPorFuncionarioAreaEstatus" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteGeneralAction"/>
+<bean name="/consultarPagoPorId" class="mx.gob.segob.nsjp.web.convenio.action.ConvenioAction"/>
+<!-- Visitaduria -->
+<bean name="/consultaDepartamentosCarpetaDeAuditoria" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultarCatalogoDeDepartamentosXFiltro" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultarEstadosPorDepartamento" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultarEstadosPorDepartamentoDinamico" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultaVisitadores" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultaexpedientesVisitadores" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultaExpedientesVisitadoresUIE" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultaCarpetasAuditoria" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultarInfoResumenVisitaduria" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/consultarCatUIE" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+
+<!-- FIN Visitaduria -->
+
+<!-- INICIA BLOG -->
+<bean name="/registrarHipotesisExpediente" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<bean name="/registrarLineaInvestigacion" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<bean name="/registrarComentario" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<bean name="/consultarHipotesisPorNumExp" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<bean name="/consultarLineasInvestigacionXExpedienteId" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<bean name="/consultarDocumentoPorIDLinea" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<bean name="/consultarComentario" class="mx.gob.segob.nsjp.web.lineadeinvestigacion.action.LineaInvestigacionAction"/>
+<!-- FINALIZA BLOG -->
+
+<!--  INICIAN ACCIONES REGISTRO DE DETENCION -->
+<bean name="/consultarCatalogoCentrosDetencion" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/agregarProbableResponsable" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/eliminarProbableResponsable" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/consultarRegistroDeDetencionPorEstatus" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/obtenerAvisoPorIdExpediente" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/consultarProbableResponsablePorNumeroExpediente" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/consultarPertenenciasPorDetencionId" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/agregarPertenencia" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/eliminarPertenencia" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/consultarTiposDePertenencia" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarLugarDeDetencionPorNumeroExpediente" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/agregarLugarDeDetencion" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+<bean name="/enviarAUnidadDeCaptura" class="mx.gob.segob.nsjp.web.seguridadPublica.action.RegistroDetencionAction"/>
+
+<!--  TERMINAN ACCIONES REGISTRO DE DETENCION -->
+
+<!-- UAVD -->
+<bean name="/ConsultarCatalogoTipoAyuda" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultarDestinatarioAtencionPsicologicaUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultaSolsXAtnderUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultarInfoResumenUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/guardaActualizaNarrativaEntrevistaComplementariaPorIdUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultarEntrevistaComplementariaPorIdUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultarFamiliaresEntrevistaComplementariaPorId" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/ingresarFamiliarAyudaPsicologicaUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultarEntrevistaInicialPorId" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/guardarEntrevistaInicial" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/ConsultarCatalogoParentesco" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultarNotaEvaluacionPorId" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/guardarNotaEvaluacion" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/guardarNotaEvaluacionNueva" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/BusquedaInicialExpPsicologicosUAVDGrid" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultaFuncionarioRemitenteSolucitudPorIdGridUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<bean name="/consultaFuncionarioRemitenteSolucitudPorIdXMLUAVD" class="mx.gob.segob.nsjp.web.uavd.action.UnidadAtencionVictimasDelitoAction"/>
+<!-- FINALIZA UAVD -->
+<bean name="/ConsultaDatosAsent" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+<bean name="/obtenerCodigoPostalXIdAsentamiento" class="mx.gob.segob.nsjp.web.caso.action.IngresarDomicilioAction"/>
+
+<!-- COMIENZAN ACCIONES PARA JAVS -->
+<bean name="/consultarAudienciaJavs" class="mx.gob.segob.nsjp.administrarAudienciaJavs.action.AdministrarAudienciaJavsAction"/>
+<bean name="/eliminarAudienciaJavs" class="mx.gob.segob.nsjp.administrarAudienciaJavs.action.AdministrarAudienciaJavsAction"/>
+<!-- TERMINAN ACCIONES PARA JAVS -->
+
+<!-- COMIENZAN ACCIONES PARA CHAT -->
+<bean name="/busquedaParametro" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+<bean name="/agregaUsuariosChat" class="mx.gob.segob.nsjp.web.administrador.action.AdministracionSistemaAction"/>
+<!-- TERMINAN ACCIONES PARA CHAT -->
+
+<!--COMIENZAN ACCIONES PARA SISTEMA TRADICIONAL-->
+
+<bean name="/consultarPliegoDeConsignacion" class="mx.gob.segob.nsjp.web.pliegoDeConsignacion.action.AdministrarPliegoDeConsignacionAction"/>
+
+<bean name="/busquedaExpedientesXEstatus" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+
+<bean name="/BusquedaExpedienteSistTrad" class="mx.gob.segob.nsjp.web.expdiente.action.BuscarExpedienteAction"/>
+
+<bean name="/ingresaPliegoConsignacion" class="mx.gob.segob.nsjp.web.atencionTempranaPenal.action.AtencionTempranaPenalAction"/>
+
+<bean name="/limpiarGrid" class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+
+<bean name="/consultarInvolucradosPorExpediente" class="mx.gob.segob.nsjp.amparo.action.AmparoAction"/>
+
+<bean name="/adjuntarAmparoAExpediente" class="mx.gob.segob.nsjp.amparo.action.AmparoAction"/>
+<bean name="/consultarAmparosPorExpediente" class="mx.gob.segob.nsjp.amparo.action.AmparoAction"/>
+<bean name="/consultarInvolucradosAsociadosAAmparo" class="mx.gob.segob.nsjp.amparo.action.AmparoAction"/>
+<bean name="/adjuntarDenunciaExterna" class="mx.gob.segob.nsjp.web.defensor.action.DefensaRestaurativaAction"/>
+
+
+<!-- INICIA: REINSERCION SOCIAL -->
+
+<bean name="/reinsercionSocial" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/consultarRS" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/consultarContenidoMenuRS" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/administarProgramas" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+
+<bean name="/guardarPrograma" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/guardarCurso" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/guardarTrabajo" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/llenarGrid" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/obtenerCatalogoPorId" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/actualizarPrograma" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/actualizarCurso" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>	
+<bean name="/actualizarTrabajo" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/eliminarPrograma" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/eliminarCurso" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>	
+<bean name="/eliminarTrabajo" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.ReinsercionSocialAction"/>
+<bean name="/consultarDatosGeneralesRS" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.DatosGeneralesReinsercionAction"/>
+<bean name="/obtenerSentenciasGrid" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.DatosGeneralesReinsercionAction"/>
+
+<bean name="/asignarProgramaRS" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AsignarProgramaReinsercionAction"/>
+<bean name="/llenarGridAsignacionPrograma" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AsignarProgramaReinsercionAction"/>
+<bean name="/obtenerDetallesAsignacionProgramaPorId" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AsignarProgramaReinsercionAction"/>
+<bean name="/guardarAsocProg" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AsignarProgramaReinsercionAction"/>
+
+<bean name="/administracionActosBuenaConducta" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarActosBuenaConductaAction"/>
+<bean name="/llenarGridActosBuenaConducta" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarActosBuenaConductaAction"/>
+<bean name="/obtenerDetallesActoBuenaConductaPorId" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarActosBuenaConductaAction"/>
+<bean name="/guardarActoBuenaConducta" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarActosBuenaConductaAction"/>
+<bean name="/actualizarActoBuenaConducta" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarActosBuenaConductaAction"/> 
+<bean name="/eliminarActoBuenaConducta" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarActosBuenaConductaAction"/>
+
+<bean name="/administracionAcumulacionPuntos" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarAcumulacionPuntosAction"/>
+<bean name="/llenarGridAcumulacionPuntos" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarAcumulacionPuntosAction"/>
+<bean name="/acumularABC" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarAcumulacionPuntosAction"/>
+<bean name="/llenarGridPeriodosAcumulacion" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.AdministrarAcumulacionPuntosAction"/>
+
+<bean name="/consultarDocumentosConCriterios" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.DocumentosReinsercionAction"/>
+<bean name="/obtenerDatosAdicionalesRS" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.EnvioDocumentosReinsercionAction"/>
+<bean name="/asignarCentroDetencionASentencia" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.EnvioDocumentosReinsercionAction"/>
+
+<bean name="/inventarioPertenencias" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+<bean name="/llenarGridInventarioPertenencias" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+<bean name="/obtenerDetallesPertenenciaPorId" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+<bean name="/guardarPertenenciaInventario" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+<bean name="/actualizarPertenenciaInventario" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+<bean name="/eliminarPertenenciaInventario" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+<bean name="/generarReciboInventarioPertenencias" class="mx.gob.segob.nsjp.web.reinsercionsocial.action.InventarioPertenenciasAction"/>
+
+<!-- TERMINA: REINSERCION SOCIAL -->
+
+<bean name="/consultarDistritos" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarAgenciasDePGJxIdDistrito" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarVisitas" class="mx.gob.segob.nsjp.web.catalogo.action.ConsultarCatalogosAction"/>
+<bean name="/consultarDiscriminantesXDistrito" class="mx.gob.segob.nsjp.web.visitaduria.action.VisitaduriaAction"/>
+<bean name="/cancelarAudiencia" class="mx.gob.segob.nsjp.administrarAudienciaJavs.action.AdministrarAudienciaJavsAction"/>
+
+<bean name="/eliminarRegistroDeCatalogo" 		class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+<bean name="/consultarParametro" class="mx.gob.segob.nsjp.web.catalogo.action.AdministrarCatalogosAction"/>
+
+</beans>

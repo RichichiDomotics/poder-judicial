@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='5'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='6'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='8'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+	</row>
+	<row id='9'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Audiencia</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">Imputación</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">30/05/2011 09:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:green; text-align:center;">04/06/2011 10:00</div>]]></cell>
+		
+	</row>
+</rows>

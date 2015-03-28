@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">173463209832903</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Tipo Objeto 1</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Objeto 1</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Descripción objeto 1</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Almacén 1</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">1734632098329032</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Tipo Objeto 2</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Objeto 2</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Descripción objeto 2</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Almacén 2</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">1734632098329033</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Tipo Objeto 3</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Objeto 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Descripción objeto 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Almacén 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">1734632098329034</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 4</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 4</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 4</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 4</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='5'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">1734632098329035</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 5</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 5</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 5.</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 5</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='6'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">1734632098329036</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 6</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 6</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 6</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 6</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">1734632098329037</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 7</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 7</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 7</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 7</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='8'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">1734632098329038</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 8</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 8</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 8</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 8</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='9'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">1734632098329039</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 9</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 9</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 9</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 9</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='10'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">17346320983290310</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 10</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 10</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 10</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 10</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='11'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">17346320983290311</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 11</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 11</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 11</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 11</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='12'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">17346320983290312</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tipo Objeto 12</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Objeto 12</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Descripción objeto 12</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Almacén 12</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+</rows>

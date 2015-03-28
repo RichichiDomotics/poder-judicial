@@ -1,0 +1,118 @@
+/*
+* Nombre del Programa : consultarTutor.css
+* Autor               : Armando Castaneda
+* Compania            : Ultrasist
+* Proyecto            : NSJP                    Fecha: 03/03/2011
+* Marca de cambio     : N/A
+* Descripcion General : Hoja de estilos para consultarTutor.jsp
+* Programa Dependiente: N/A                                                    
+* Programa Subsecuente: N/A                                                     
+* Cond. de ejecucion  : N/A                                                     
+* Dias de ejecucion   : N/A                             Horario: N/A      
+*                              MODIFICACIONES                                      
+*------------------------------------------------------------------------------          
+* Autor               :N/A                                                           
+* Compania            :N/A                                                           
+* Proyecto            :N/A                                   Fecha: N/A       
+* Modificacion        :N/A                                                          
+*------------------------------------------------------------------------------         
+*/
+
+BODY {
+	margin: 10px;
+	padding: 0;
+	font-family:"Lucida Grande","bitstream vera sans","trebuchet ms",sans-serif,verdana;
+	font-size: 12px;
+}
+
+H1 {
+	margin-bottom: 2px;
+	font-family: Garamond, "Times New Roman", Times, Serif;
+}
+
+DIV.container {
+	margin: auto;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+TEXTAREA {
+	width: 80%;
+}
+
+FIELDSET {
+	border: 1px solid #ccc;
+	padding: 1em;
+	margin: 0;
+}
+
+LEGEND {
+	color: #ccc;
+	font-size: 120%;
+}
+
+INPUT,TEXTAREA {
+	font-family: Arial, verdana;
+	font-size: 125%;
+	padding: 2px;
+
+}
+
+LABEL {
+	display: block;
+	margin-top: 10px;
+}
+
+IMG {
+	margin: 5px;
+}
+
+#general {
+	background-color: #fff;
+}
+
+.waste {
+	min-height: 1000px;
+}
+
+/*Estilos para tab de Denunciante*/
+
+UL.tabNavigationConsultaTutor {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+UL.tabNavigationConsultaTutor LI {
+	display: inline;
+}
+
+UL.tabNavigationConsultaTutor LI A {
+	padding: 3px 5px;
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+
+UL.tabNavigationConsultaTutor LI A.selected,UL.tabNavigationConsultaTutor LI A:hover {
+	background-color: #333;
+	color: #fff;
+	padding-top: 7px;
+}
+
+UL.tabNavigationConsultaTutor LI A:focus {
+	outline: 0;
+}
+
+div.tabsConsultaTutor > div {
+	padding: 5px;
+	margin-top: 3px;
+	border: 5px solid #333;
+}
+
+div.tabsConsultaTutor > div h2 {
+	margin-top: 0;
+}
+
+/*Fin Estilos para tab de Consulta Tutor*/
+

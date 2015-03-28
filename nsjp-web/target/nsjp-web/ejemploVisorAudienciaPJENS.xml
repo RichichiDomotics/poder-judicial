@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'> 
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Carlos Suarez</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Victima</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoria</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" checked="checked"/></div>]]></cell>
+	
+	</row>
+	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Carlos Suarez</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Victima</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoria</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" checked="checked"/></div>]]></cell>
+	
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Carlos Suarez</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Victima</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoria</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" checked="checked"/></div>]]></cell>
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Carlos Suarez</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Victima</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoria</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false"  checked="checked"/></div>]]></cell>
+	
+	</row>
+	
+	<row id='5'>
+	<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Carlos Suarez</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Victima</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoria</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" checked="checked"/></div>]]></cell>
+	
+	</row>
+	
+<!--	<row id='6'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">006</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">05306</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Charles John Huffam Dickens</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Tecnico</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Seguridad P�blica</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abogado Integraci�n 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo5" onclick="$('#algo5').attr('checked','checked');"/></div>]]></cell>
+		
+	</row>
+	
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939">007</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939">6523</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939">Tecnico</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Seguridad P�blica</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#393939;">Abogado Integraci�n 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:##393939;"><input type="checkbox" value="false" id="algo7" onclick="$('#algo7').attr('checked','checked');"/></div>]]></cell>
+		
+	</row>
+	<row id='8'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">008</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">056408</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Juaquin L�pez Doriga</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Tecnico</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Seguridad P�blica</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abogado Integraci�n 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo8" onclick="$('#algo8').attr('checked','checked');"/></div>]]></cell>
+		
+	</row>
+	 <row id='9'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">009</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor brit�nico m�s conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Cerrado</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row>
+	<row id='10'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">010</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor brit�nico m�s conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Cerrado</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row>
+	<row id='11'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor brit�nico m�s conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Abierto</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row>
+	<row id='12'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">012</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor brit�nico m�s conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Cerrado</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row> -->
+</rows>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Nombre del Programa : web.xml Autor : Jose Luis Compania : Ultrasist 
+	Proyecto : NSJP Fecha: dd/mm/aaaa Marca de cambio : N/A Descripcion General 
+	: Archivo de configuración de la aplicacion web Programa Dependiente: N/A 
+	Programa Subsecuente: N/A Cond. de ejecucion : N/A Dias de ejecucion : N/A 
+	Horario: N/A MODIFICACIONES Autor : N/A Compania : N/A Proyecto : N/A Fecha: 
+	N/A Modificacion : N/A -->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                       http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>procuraduria</display-name>
+	<!-- Standard Action Servlet Configuration (with debugging) -->
+	<filter>
+		<filter-name>GenericNSJPFilter</filter-name>
+		<filter-class>mx.gob.segob.nsjp.web.base.filter.GenericNSJPFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>GenericNSJPFilter</filter-name>
+		<servlet-name>action</servlet-name>
+	</filter-mapping>
+  <listener>
+		<listener-class>mx.gob.segob.nsjp.web.base.listener.ManejadorSesion</listener-class>
+	</listener>
+
+	<filter>
+             <filter-name>VerificadorEstatusSesionFilter</filter-name>
+             <filter-class>mx.gob.segob.nsjp.sesion.VerificadorEstatusSesionFilter</filter-class>
+             <init-param>
+                    <param-name>urlLogin</param-name>
+                    <param-value>/Login.do</param-value>
+             </init-param>
+             <init-param>
+                    <param-name>cargaLogin</param-name>
+                    <param-value>/cargarLogin.do</param-value>
+             </init-param>
+             <init-param>
+                    <param-name>urlLogout</param-name>
+                    <param-value>/Logout.do</param-value>
+             </init-param>
+             <init-param>
+                    <param-name>urlRedirec</param-name>
+                    <param-value>index.jsp</param-value>
+             </init-param>
+       </filter>
+    <filter-mapping>
+       <filter-name>VerificadorEstatusSesionFilter</filter-name>
+       <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+		<!-- init-param> <param-name>chainConfig</param-name> <param-value>org/apache/struts/tiles/chain-config.xml</param-value> 
+			</init-param -->
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<init-param>
+        	<param-name>chainConfig</param-name>
+        	<param-value>org/apache/struts/tiles/chain-config.xml</param-value>
+    	</init-param>
+	</servlet>
+	<!-- Kaptcha Service -->
+	 <servlet>
+        <servlet-name>Kaptcha</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+        <init-param>
+            <param-name>kaptcha.textproducer.font.color</param-name>
+            <param-value>blue</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.border.color</param-name>
+            <param-value>blue</param-value>
+        </init-param>
+        <init-param>
+            <param-name>kaptcha.noise.color</param-name>
+            <param-value>blue</param-value>
+        </init-param>
+    </servlet>
+     <servlet-mapping>
+        <servlet-name>Kaptcha</servlet-name>
+        <url-pattern>/kaptcha.jpg</url-pattern>
+    </servlet-mapping>
+    
+	<!-- Standard Action Servlet Mapping -->
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- The Usual Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/log4j-config.xml</param-value>
+	</context-param>
+	
+	<context-param>
+	<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/action-servlet.xml 
+		</param-value>
+	</context-param>
+
+
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/WEB-INF/tld/struts-bean.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tld/struts-html.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tld/struts-html.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tld/struts-logic.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tld/struts-logic.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tld/struts-nested.tld</taglib-uri>
+			<taglib-location>/WEB-INF/tld/struts-nested.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

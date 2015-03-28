@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'> 
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">001</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Restaurativa</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Hugo Sánchez</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Amenaza</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoría</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">24/05/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">14:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abogado Alternativa 2</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo10" checked="checked" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Integración</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Jasper Hayton</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Procuraduría</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">24/05/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">14:20 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Abogado Integración 3</div>]]></cell>
+	    <cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="false" id="algo11" checked="checked" disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">003</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">003</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Defensoría técnica</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Fabiola Bezares</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Corrupción de menores</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Poder judicial</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">24/05/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abogado Defensa 1</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo12"  checked="checked" disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red">002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red">002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red">Integración</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red">Jasper Hayton</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Robo</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Defensoría</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">18:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Abogado Integración 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="false" id="algo13" checked="checked"  disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	<row id='5'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">005</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">005</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Integración</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Javier Hernandes</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Asalto</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Seguridad Pública</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">24/05/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">18:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">&ensp;</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="false" id="algo14"  checked="checked" disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	<!--<row id='6'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">006</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">006</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Restaurativa</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">John Ronald Reuel Tolkien</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Asalto</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Seguridad Pública</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18:00</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abogado 2</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo15" checked="checked" disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">007</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">007</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red">Restaurativa</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Asalto</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Seguridad Pública</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Abogado 1</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo16" checked="checked" disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	<row id='8'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">008</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">008</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Restaurativa</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Juaquin López Doriga</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Asalto</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Seguridad Pública</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Abogado 3</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="false" id="algo17" checked="checked" disabled="disabled"/></div>]]></cell>
+	
+	</row>
+	 <row id='9'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">009</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor británico más conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Cerrado</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row>
+	<row id='10'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">010</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor británico más conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Cerrado</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row>
+	<row id='11'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor británico más conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Abierto</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row>
+	<row id='12'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">012</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Mejor conocida como JK Rowling es un autor británico más conocido...</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000">Cerrado</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Si</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">18/04/2011</div>]]></cell>
+	
+	</row> -->
+</rows>

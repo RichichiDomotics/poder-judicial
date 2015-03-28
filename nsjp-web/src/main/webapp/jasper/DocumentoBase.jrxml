@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DocumentoBase" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.7715610000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="contenido" class="java.lang.String"/>
+	<parameter name="diaCreacion" class="java.lang.String"/>
+	<parameter name="mesCreacion" class="java.lang.String"/>
+	<parameter name="anioCreacion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="36" width="572" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["MÉRIDA, YUCATÁN, A " +$P{diaCreacion}+ " DE " +$P{mesCreacion}+ " " + $P{anioCreacion} + "."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[UNIDAD DE ATENCIÓN TEMPRANA DE LA PROCURADURÍA GENERAL DE JUSTICIA DEL ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="572" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[ASUNTO: EL QUE SE INDICA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="64" width="572" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[OFICIO: ***/MED/20**.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="340" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="572" height="340"/>
+				<textElement markup="html">
+					<font fontName="Arial" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{contenido}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="1" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="1" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="66" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[COMPARECIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="52" width="286" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TESTIGO DE ASISTENCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="286" y="52" width="286" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TESTIGO DE ASISTENCIA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="193" y="31" width="186" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

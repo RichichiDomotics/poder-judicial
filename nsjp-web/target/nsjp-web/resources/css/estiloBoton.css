@@ -1,0 +1,105 @@
+
+ul.toolbar {
+	position:	relative;
+	overflow:	hidden; /* required to CONTAINER 'floating li' in FF */
+	height:		auto;
+	margin:		0;
+	padding:	2px;
+	width:		100%;
+	list-style:	none;
+	text-align: center;
+	background: #D6D6D6 url(/nsjp-web/resources/images/layout/d6d6d6_40x100_textures_02_glass_80.png) 0 50% repeat-x;
+	border-top: 1px solid #BBB;
+	
+	}
+	ul.toolbar li {
+		font-size: 0.9em;
+		margin: 0;
+		padding: 2px 7px;
+		float: center;
+		color: #000;
+		border: 1px solid transparent;
+		border-right-color: #BBB;
+		cursor: pointer;
+	}
+	ul.toolbar li:hover {
+		color: #005;
+		background: #EEE url(/nsjp-web/resources/images/layout/eeeeee_40x100_textures_02_glass_90.png) 0 50% repeat-x;
+		border-top-color: #BBB;
+		border-bottom-color: #BBB;
+	}
+	ul.toolbar li.first:hover {
+		border-left-color: #BBB;
+		}
+		ul.toolbar li span {
+			/* icons in toolbar */
+			width: 			15px;
+			height:			15px;
+			margin-left:	-3px;
+			margin-right:	0.75ex;
+			vertical-align:	middle;
+			opacity:		0.6;
+			filter:			alpha(opacity=60);
+			display:		block;
+			display:		inline-block;
+		}
+		ul.toolbar li:hover span {
+			opacity: 1;
+			filter: alpha(opacity=100);
+		}
+		li.button-toggle-north span	,
+		li.button-open-south span	{ background: url(/nsjp-web/resources/images/layout/go-up-on.gif) no-repeat center; }
+		li.button-close-south span	{ background: url(/nsjp-web/resources/images/layout/go-dn-on.gif) no-repeat center; }
+		li.button-pin-up span		{ background: url(/nsjp-web/resources/images/layout/pin-up-on.gif) no-repeat center; }
+		li.button-pin-down span		{ background: url(/nsjp-web/resources/images/layout/pin-dn-on.gif) no-repeat center; }
+
+
+
+ul.botonLeyes {
+	position:	relative;
+	overflow:	hidden; /* required to CONTAINER 'floating li' in FF */
+	height:		auto;
+	margin:		0;
+	padding:	2px;
+	width:		100%;
+	list-style:	none;
+	text-align: center;
+	background: #D6D6D6 url(/nsjp-web/resources/images/layout/d6d6d6_40x100_textures_02_glass_80.png) 0 50% repeat-x;
+	border-top: 1px solid #BBB;
+	
+	}
+	ul.botonLeyes li {
+		font-size: 0.9em;
+		margin: 0;
+		padding: 2px 7px;
+		float: center;
+		color: #000;
+		border: 1px solid transparent;
+		border-right-color: #BBB;
+		cursor: pointer;
+	}
+	ul.botonLeyes li:hover {
+		color: #005;
+		background: #EEE url(/nsjp-web/resources/images/layout/eeeeee_40x100_textures_02_glass_90.png) 0 50% repeat-x;
+		border-top-color: #BBB;
+		border-bottom-color: #BBB;
+	}
+	ul.botonLeyes li.first:hover {
+		border-left-color: #BBB;
+		}
+		ul.botonLeyes li span {
+			/* icons in toolbar */
+			width: 			15px;
+			height:			15px;
+			margin-left:	-3px;
+			margin-right:	0.75ex;
+			vertical-align:	middle;
+			opacity:		0.6;
+			filter:			alpha(opacity=60);
+			display:		block;
+			display:		inline-block;
+		}
+		ul.botonLeyes li:hover span {
+			opacity: 1;
+			filter: alpha(opacity=100);
+		}

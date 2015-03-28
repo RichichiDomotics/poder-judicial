@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>12</records>
+	<row id='1'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">3</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">3</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"> </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Fabiola Bezares</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Corrupción de Menores</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">No</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"> </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"> </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">06/06/2011 10:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">24/05/2011 14:55 </div>]]></cell>
+		
+	</row>
+<!--	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">5</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">5</div>]]></cell>		
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Javier Hernandez</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">Asalto </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"> </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">12/03/2011 18:00 </div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">12/03/2011 18:00</div>]]></cell>
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>003</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>008763</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Publica</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Alejandro Paredes</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Alternativa 2</b></div>]]></cell>
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>004</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>008764</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Publica</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Victor Gï¿½mez</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Defensa 1</b></div>]]></cell>
+	</row>
+	<row id='5'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>005</b></div>]]></cell>
+			<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>0755705</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Publica</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Victor Gï¿½mez</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Alternativa 2</b></div>]]></cell>
+	</row>
+	<row id='6'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>006</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>006756</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Publica</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Victor Gï¿½mez</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Defensa 1</b></div>]]></cell>
+	</row>
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>007</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>076507</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Publica</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Victor Gï¿½mez</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Alternativa 2</b></div>]]></cell>
+	</row>
+	<row id='7'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>008</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>0758908</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Privada</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Victor Gï¿½mez</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Defensa 1</b></div>]]></cell>
+	</row>
+	<row id='8'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>009</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>0064659</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Privada</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Javier Rojo</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Defensa 1</b></div>]]></cell>
+	</row>
+	<row id='10'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>010</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>065410</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Privada</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Alejandro Rojas</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Alternativa 2</b></div>]]></cell>
+	</row>
+	<row id='11'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>06511</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Privada</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Daniel Mendez</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Defensa 1</b></div>]]></cell>
+	</row>
+	<row id='12'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>012</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>878</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>18/04/2011</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>16:00 pm</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juicio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Privada</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500"><b>Juan Gutemberg</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Homicidio</b></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#FF4500;"><b>Abogado Defensa 1</b></div>]]></cell>
+	</row> -->
+</rows>

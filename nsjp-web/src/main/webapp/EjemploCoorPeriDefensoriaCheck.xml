@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+ <rows>
+	<page>1</page>
+	<total>2</total>
+	<records>5</records>
+	<row id='1'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;"><input type="checkbox" value="true" id="algo_a1" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">John Ronald Reuel Tolkien</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">001</div]]></cell>
+		<cell></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">Contabilidad Forense</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">18/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;"><input type="checkbox" checked="checked" disabled="disabled" id="algo2" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='2'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;"><input type="checkbox" value="true" id="algo_a2" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">Joanne "Jo" Rowling</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">002</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">Discapacidad Auditiva</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">19/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;"><input type="checkbox" disabled="disabled" id="algo2" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='3'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;"><input type="checkbox" value="true" id="algo_a3" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">Juaquin López Doriga</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">003</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">003</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">Electricidad Forense</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;">20/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;;"><input type="checkbox"  disabled="disabled" id="algo2" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='4'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="true" id="algo_a4" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">John Ronald Reuel Tolkien</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">004</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">004</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Impacto Ambiental</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">21/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" checked="checked" disabled="disabled" id="algo2" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+	<row id='5'>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" value="true" id="algo_a5" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Charles John Huffam Dickens</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">005</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">005</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">001</div]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">Incendios Y Explosiones</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;">22/04/2011</div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:#000000;"><input type="checkbox" disabled="disabled" id="algo2" onclick="$('#algo2').attr('checked','checked');"/></div>]]></cell>
+		<cell><![CDATA[<div style="background-color: #f2f2f2; color:red;"><input type="checkbox" value="true" disabled="disabled"/></div>]]></cell>
+	</row>
+</rows>
